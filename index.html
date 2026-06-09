@@ -317,11 +317,11 @@
         box-shadow: 0 12px 40px rgba(79, 70, 229, 0.18);
       }
 
-      .tool-card-dice h3 {
+      /* .tool-card-dice h3 {
         font-family: "Instrument Serif", serif;
         font-size: 22px;
         letter-spacing: -0.3px;
-      }
+      } */
 
       .dice-badge-row {
         display: flex;
@@ -359,7 +359,11 @@
       .tool-card.tool-card-featured {
         grid-column: 1 / -1;
         border-color: var(--accent);
-        background: linear-gradient(180deg, var(--accent-soft) 0%, var(--bg) 48%);
+        background: linear-gradient(
+          180deg,
+          var(--accent-soft) 0%,
+          var(--bg) 48%
+        );
       }
 
       .tool-card-featured .tool-tech {
@@ -1051,7 +1055,11 @@
         border: 2px solid var(--accent);
         border-radius: var(--radius-lg);
         overflow: hidden;
-        background: linear-gradient(180deg, var(--accent-soft) 0%, var(--bg) 120px);
+        background: linear-gradient(
+          180deg,
+          var(--accent-soft) 0%,
+          var(--bg) 120px
+        );
         margin-bottom: 32px;
       }
 
@@ -1400,12 +1408,12 @@
             </h1>
             <p class="hero-pitch">
               My job title says Talent Acquisition.<br />
-              <strong>HR insider turned builder.</strong><br /><br />
+              <strong>my work says Developer.</strong><br /><br />
               I automate the workflows I lived in — from Universal HR HUB at
               Ericsson (human-in-the-loop document pipelines) to public FastAPI
               projects on GitHub. Five years across Ericsson, Infineon and Bosch
-              give me the context; Python and AI-assisted development give me the
-              execution.
+              give me the context; Python and AI-assisted development give me
+              the execution.
             </p>
             <div class="hero-actions">
               <a
@@ -1607,49 +1615,50 @@
               Evolution — merged into Universal HR HUB
             </div>
             <div class="tools-legacy-grid">
-          <div class="tool-card accent-amber">
-            <span class="tool-badge badge-amber"
-              >Personal · Used at Ericsson</span
-            >
-            <h3>HR Contract Document Generator</h3>
-            <p>
-              A Python desktop app with a GUI that collects contract data and
-              auto-populates <code>{{token}}</code>-based templates, generating
-              complete <code>.docx</code> and <code>.xls</code> files. My
-              manager saw it and asked me to extend the concept for other team
-              members globally. This was the original Hungary-focused tkinter
-              prototype — now superseded by Universal HR HUB.
-            </p>
-            <div class="tool-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">tkinter</span>
-              <span class="tech-tag">python-docx</span>
-              <span class="tech-tag">openpyxl</span>
-              <span class="tech-tag">File I/O</span>
-            </div>
-          </div>
+              <div class="tool-card accent-amber">
+                <span class="tool-badge badge-amber"
+                  >Personal · Used at Ericsson</span
+                >
+                <h3>HR Contract Document Generator</h3>
+                <p>
+                  A Python desktop app with a GUI that collects contract data
+                  and auto-populates <code>{{token}}</code>-based templates,
+                  generating complete <code>.docx</code> and
+                  <code>.xls</code> files. My manager saw it and asked me to
+                  extend the concept for other team members globally. This was
+                  the original Hungary-focused tkinter prototype — now
+                  superseded by Universal HR HUB.
+                </p>
+                <div class="tool-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">tkinter</span>
+                  <span class="tech-tag">python-docx</span>
+                  <span class="tech-tag">openpyxl</span>
+                  <span class="tech-tag">File I/O</span>
+                </div>
+              </div>
 
-          <div class="tool-card accent-teal">
-            <span class="tool-badge badge-teal"
-              >Personal · Used at Ericsson</span
-            >
-            <h3>Print Automation CLI</h3>
-            <p>
-              An interactive CMD tool that guides users through configurable
-              print settings with input validation and error checking, then
-              sends files to the company's network print server with a real-time
-              progress bar. The workflow was later integrated into Universal HR
-              HUB as the Nyomtatás addon; the standalone CLI remains in
-              reference scripts.
-            </p>
-            <div class="tool-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">CLI</span>
-              <span class="tech-tag">subprocess</span>
-              <span class="tech-tag">Error Handling</span>
-              <span class="tech-tag">Network I/O</span>
-            </div>
-          </div>
+              <div class="tool-card accent-teal">
+                <span class="tool-badge badge-teal"
+                  >Personal · Used at Ericsson</span
+                >
+                <h3>Print Automation CLI</h3>
+                <p>
+                  An interactive CMD tool that guides users through configurable
+                  print settings with input validation and error checking, then
+                  sends files to the company's network print server with a
+                  real-time progress bar. The workflow was later integrated into
+                  Universal HR HUB as the Nyomtatás addon; the standalone CLI
+                  remains in reference scripts.
+                </p>
+                <div class="tool-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">CLI</span>
+                  <span class="tech-tag">subprocess</span>
+                  <span class="tech-tag">Error Handling</span>
+                  <span class="tech-tag">Network I/O</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -1666,13 +1675,13 @@
             <h3>DICE — Native AI Dashboard Team</h3>
             <p>
               <strong>DICE</strong> is Ericsson's internal squad building
-              business intelligence dashboards on
-              <strong>Native AI</strong> — turning enterprise data into
-              actionable views for stakeholders. Outside my core HR role, I serve
-              as process advisor and unofficial Scrum Master: facilitating
-              2-week sprints with mentor support, mapping workflows, spotting
-              automation opportunities, and shadowing another squad through a
-              full delivery cycle alongside engineers and product owners.
+              business intelligence dashboards on <strong>Native AI</strong> —
+              turning enterprise data into actionable views for stakeholders.
+              Outside my core HR role, I serve as process advisor and unofficial
+              Scrum Master: facilitating 2-week sprints with mentor support,
+              mapping workflows, spotting automation opportunities, and
+              shadowing another squad through a full delivery cycle alongside
+              engineers and product owners.
             </p>
             <div class="tool-tech">
               <span class="tech-tag tech-tag-ai">Native AI</span>
@@ -1730,93 +1739,95 @@
                 </a>
               </div>
 
-          <div class="tool-card" style="border-style: dashed">
-            <span
-              class="tool-badge"
-              style="background: var(--bg3); color: var(--muted)"
-              >GitHub · Open</span
-            >
-            <h3>Budget Tracker App</h3>
-            <p>
-              FreeCodeCamp certification project. Python OOP — custom spending
-              categories, transaction ledger, fund-checking guards, and an ASCII
-              spend chart. Clean class design with full error handling.
-            </p>
-            <div class="tool-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">OOP</span>
-              <span class="tech-tag">Data Structures</span>
-            </div>
+              <div class="tool-card" style="border-style: dashed">
+                <span
+                  class="tool-badge"
+                  style="background: var(--bg3); color: var(--muted)"
+                  >GitHub · Open</span
+                >
+                <h3>Budget Tracker App</h3>
+                <p>
+                  FreeCodeCamp certification project. Python OOP — custom
+                  spending categories, transaction ledger, fund-checking guards,
+                  and an ASCII spend chart. Clean class design with full error
+                  handling.
+                </p>
+                <div class="tool-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">OOP</span>
+                  <span class="tech-tag">Data Structures</span>
+                </div>
 
-            <a
-              href="https://github.com/KrisiBoy/Cert_Project_2-Build-a-Budget-App"
-              target="_blank"
-              class="tool-link"
-            >
-              View on GitHub
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-              >
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                />
+                <a
+                  href="https://github.com/KrisiBoy/Cert_Project_2-Build-a-Budget-App"
+                  target="_blank"
+                  class="tool-link"
+                >
+                  View on GitHub
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    />
 
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" y1="14" x2="21" y2="3" />
-              </svg>
-            </a>
-          </div>
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
 
-          <div class="tool-card" style="border-style: dashed">
-            <span
-              class="tool-badge"
-              style="background: var(--bg3); color: var(--muted)"
-              >GitHub · Open</span
-            >
-            <h3>User Configuration Manager</h3>
-            <p>
-              FreeCodeCamp certification project. Dict-based settings CRUD with
-              add, update, delete, and view operations. Keys and values are
-              normalised to lowercase; duplicate keys are rejected with clear
-              error messages — matching the FCC function-design requirements.
-            </p>
-            <div class="tool-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Dictionaries</span>
-              <span class="tech-tag">Input Validation</span>
-              <span class="tech-tag">Function Design</span>
-            </div>
+              <div class="tool-card" style="border-style: dashed">
+                <span
+                  class="tool-badge"
+                  style="background: var(--bg3); color: var(--muted)"
+                  >GitHub · Open</span
+                >
+                <h3>User Configuration Manager</h3>
+                <p>
+                  FreeCodeCamp certification project. Dict-based settings CRUD
+                  with add, update, delete, and view operations. Keys and values
+                  are normalised to lowercase; duplicate keys are rejected with
+                  clear error messages — matching the FCC function-design
+                  requirements.
+                </p>
+                <div class="tool-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Dictionaries</span>
+                  <span class="tech-tag">Input Validation</span>
+                  <span class="tech-tag">Function Design</span>
+                </div>
 
-            <a
-              href="https://github.com/KrisiBoy/Cert_Project_1-Build-a-User-Configuration-Manager"
-              target="_blank"
-              class="tool-link"
-            >
-              View on GitHub
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-              >
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                />
+                <a
+                  href="https://github.com/KrisiBoy/Cert_Project_1-Build-a-User-Configuration-Manager"
+                  target="_blank"
+                  class="tool-link"
+                >
+                  View on GitHub
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    />
 
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" y1="14" x2="21" y2="3" />
-              </svg>
-            </a>
-          </div>
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1828,9 +1839,10 @@
         <div class="section-label">Try it live</div>
         <h2>Interactive Tool Playground</h2>
         <p class="section-sub">
-          Walk through the Universal HR HUB workflow — internal tool, interactive
-          simulation below. Vacation tokens flow into the contract engine, then
-          documents go to the print queue. Cert project demos are below.
+          Walk through the Universal HR HUB workflow — internal tool,
+          interactive simulation below. Vacation tokens flow into the contract
+          engine, then documents go to the print queue. Cert project demos are
+          below.
         </p>
 
         <div id="hub-demo" class="hub-shell reveal">
@@ -1895,7 +1907,9 @@
           </div>
 
           <div class="hub-panel active" id="hub-tab-vacation">
-            <span class="hub-addon-badge">Addon · Hungary Vacation Calculator</span>
+            <span class="hub-addon-badge"
+              >Addon · Hungary Vacation Calculator</span
+            >
             <div class="demo-row">
               <div>
                 <div class="demo-form-group">
@@ -2021,7 +2035,9 @@
           </div>
 
           <div class="hub-panel" id="hub-tab-print">
-            <span class="hub-addon-badge">Addon · Nyomtatás (Print Automation)</span>
+            <span class="hub-addon-badge"
+              >Addon · Nyomtatás (Print Automation)</span
+            >
             <div class="demo-row">
               <div>
                 <div class="demo-form-group">
@@ -2213,7 +2229,9 @@
                   <button class="demo-btn" onclick="settingsDelete()">
                     Delete
                   </button>
-                  <button class="demo-btn" onclick="settingsView()">View</button>
+                  <button class="demo-btn" onclick="settingsView()">
+                    View
+                  </button>
                 </div>
               </div>
               <div>
@@ -2258,15 +2276,17 @@
               lead — for the summer development cycle, ongoing. Facilitating
               2-week sprints for a squad of software engineering interns, daily
               standups, blocker removal, and end-of-sprint demos. Supported by
-              an assigned mentor and cross-team exposure: shadowing another squad
-              through a full delivery workflow from planning to demo.
+              an assigned mentor and cross-team exposure: shadowing another
+              squad through a full delivery workflow from planning to demo.
             </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot current"></div>
             <div class="timeline-date">2026 — ongoing</div>
-            <div class="timeline-title">Flight Price Tracker — public FastAPI project</div>
+            <div class="timeline-title">
+              Flight Price Tracker — public FastAPI project
+            </div>
             <div class="timeline-desc">
               Building and shipping
               <a
@@ -2284,13 +2304,15 @@
           <div class="timeline-item">
             <div class="timeline-dot current"></div>
             <div class="timeline-date">2026 - ongoing</div>
-            <div class="timeline-title">Joined DICE — Native AI at Ericsson</div>
+            <div class="timeline-title">
+              Joined DICE — Native AI at Ericsson
+            </div>
             <div class="timeline-desc">
               Started contributing to Ericsson's internal
               <strong>DICE</strong> team — building business intelligence
               dashboards on Native AI — as a process and automation advisor,
-              mapping workflows and advising on delivery alongside engineers
-              and product stakeholders.
+              mapping workflows and advising on delivery alongside engineers and
+              product stakeholders.
             </div>
           </div>
 
@@ -2319,25 +2341,70 @@
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">2025 - <span style="font-size: 1.6rem;display: inline-block; vertical-align: middle; line-height: 1;">∞</span></div>
-            <div class="timeline-title">Continuous Learning & Technical Certifications</div>
+            <div class="timeline-date">
+              2025 -
+              <span
+                style="
+                  font-size: 1.6rem;
+                  display: inline-block;
+                  vertical-align: middle;
+                  line-height: 1;
+                "
+                >∞</span
+              >
+            </div>
+            <div class="timeline-title">
+              Continuous Learning & Technical Certifications
+            </div>
             <div class="timeline-desc">
-                <p style="margin-bottom: 12px;">Dedicated to continuous upskilling by mastering software engineering foundational workflows, modern programming paradigms, and enterprise tech stacks through structured curricula:</p>
-                
-                <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.6;">
-                    <li style="margin-bottom: 8px;">
-                        <strong>FreeCodeCamp (Scientific Computing with Python):</strong> Built foundational algorithmic thinking and data structures; completed core projects including the Budget Tracker and User Configuration Manager.
-                    </li>
-                    <li style="margin-bottom: 8px;">
-                        <strong>Skillsoft (Pythonista + Machine Learning track):</strong> Completed advanced Python and ML training modules at Ericsson, including Generative AI (Skillsoft cert) and ML fundamentals.
-                    </li>
-                    <li style="margin-bottom: 4px;">
-                        <strong>Forage Enterprise Simulations (BCG, Datacom, Siemens):</strong> Completed hands-on practical simulations covering IT Architecture, Software Development, and modern project management frameworks.
-                    </li>
-                    <li style="margin-bottom: 8px;">
-                        <strong>PMI (Certified Associate in Project Management - CAPM):</strong> Formal certification to build a standardized foundation in project governance, predictive methodologies, and agile frameworks.
-                    </li>
-                </ul>
+              <p style="margin-bottom: 12px">
+                Dedicated to continuous upskilling by mastering software
+                engineering foundational workflows, modern programming
+                paradigms, and enterprise tech stacks through structured
+                curricula:
+              </p>
+
+              <ul
+                style="
+                  list-style-type: disc;
+                  padding-left: 20px;
+                  line-height: 1.6;
+                "
+              >
+                <li style="margin-bottom: 8px">
+                  <strong
+                    >FreeCodeCamp (Scientific Computing with Python):</strong
+                  >
+                  Built foundational algorithmic thinking and data structures;
+                  completed core projects including the Budget Tracker and User
+                  Configuration Manager.
+                </li>
+                <li style="margin-bottom: 8px">
+                  <strong
+                    >Skillsoft (Pythonista + Machine Learning track):</strong
+                  >
+                  Completed advanced Python and ML training modules at Ericsson,
+                  including Generative AI (Skillsoft cert) and ML fundamentals.
+                </li>
+                <li style="margin-bottom: 4px">
+                  <strong
+                    >Forage Enterprise Simulations (BCG, Datacom,
+                    Siemens):</strong
+                  >
+                  Completed hands-on practical simulations covering IT
+                  Architecture, Software Development, and modern project
+                  management frameworks.
+                </li>
+                <li style="margin-bottom: 8px">
+                  <strong
+                    >PMI (Certified Associate in Project Management -
+                    CAPM):</strong
+                  >
+                  Formal certification to build a standardized foundation in
+                  project governance, predictive methodologies, and agile
+                  frameworks.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -2363,18 +2430,18 @@
               platform I use daily at Ericsson, built around
               <strong>human-in-the-loop</strong> steps before documents are
               exported or sent to print. I got asked to extend the concept for
-              teams globally, all without a developer job title. I also work with
-              DICE, Ericsson's internal <strong>Native AI</strong> dashboard
-              team, as process advisor and unofficial Scrum Master — facilitating
-              sprints with mentor support while shadowing another team through a
-              full delivery workflow.
+              teams globally, all without a developer job title. I also work
+              with DICE, Ericsson's internal
+              <strong>Native AI</strong> dashboard team, as process advisor and
+              unofficial Scrum Master — facilitating sprints with mentor support
+              while shadowing another team through a full delivery workflow.
             </p>
             <p>
               I use AI daily to speed up design, prototyping, and documentation
               — but I still own architecture, validation, and release decisions.
-              My automation follows a clear pattern: calculate, review, generate,
-              approve, then ship. I'm growing toward workflow architecture while
-              still building the first version myself.
+              My automation follows a clear pattern: calculate, review,
+              generate, approve, then ship. I'm growing toward workflow
+              architecture while still building the first version myself.
             </p>
             <p>
               My edge is context. I don't just write code — I understand
@@ -2472,13 +2539,7 @@
             <div class="aside-card">
               <h4>References</h4>
               <div class="ref-block">
-                <div
-                  style="
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 12px;
-                  "
-                >
+                <div style="display: flex; align-items: flex-start; gap: 12px">
                   <div
                     style="
                       width: 40px;
@@ -2505,13 +2566,7 @@
                 </div>
               </div>
               <div class="ref-block">
-                <div
-                  style="
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 12px;
-                  "
-                >
+                <div style="display: flex; align-items: flex-start; gap: 12px">
                   <div
                     style="
                       width: 40px;
@@ -2766,9 +2821,13 @@
           return;
         }
         const category = getOrCreateCategory(cat);
-        const desc = document.getElementById("b-desc").value.trim() || "Withdrawal";
+        const desc =
+          document.getElementById("b-desc").value.trim() || "Withdrawal";
         if (category.withdraw(amt, desc)) {
-          showBudgetMsg(`Withdrew ${amt.toFixed(0)} HUF from ${cat}.`, "success");
+          showBudgetMsg(
+            `Withdrew ${amt.toFixed(0)} HUF from ${cat}.`,
+            "success",
+          );
         } else {
           showBudgetMsg(
             `Insufficient funds in ${cat}. Balance: ${category.getBalance().toFixed(0)} HUF.`,
@@ -2783,11 +2842,17 @@
         const target = document.getElementById("b-target").value.trim();
         const amt = parseBudgetAmount();
         if (!cat || !target || amt === null) {
-          showBudgetMsg("Enter source category, target category, and amount.", "error");
+          showBudgetMsg(
+            "Enter source category, target category, and amount.",
+            "error",
+          );
           return;
         }
         if (cat.toLowerCase() === target.toLowerCase()) {
-          showBudgetMsg("Source and target must be different categories.", "error");
+          showBudgetMsg(
+            "Source and target must be different categories.",
+            "error",
+          );
           return;
         }
         const from = getOrCreateCategory(cat);
