@@ -140,6 +140,45 @@
         background: #f0fafc;
       }
 
+      .project-card.dice {
+        border: 2px solid #7c3aed;
+        background: linear-gradient(135deg, #f5f3ff 0%, #faf5ff 45%, #fff 100%);
+        box-shadow: 0 4px 20px rgba(124, 58, 237, 0.12);
+      }
+
+      .project-card.dice .proj-title {
+        color: #5b21b6;
+        font-size: 15px;
+      }
+
+      .project-card.dice .project-desc {
+        color: #4c1d95;
+      }
+
+      .dice-badge {
+        display: inline-block;
+        background: linear-gradient(90deg, #7c3aed, #4f46e5);
+        color: #fff;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 2px 8px;
+        border-radius: 20px;
+        margin-left: 8px;
+        vertical-align: middle;
+      }
+
+      .project-card.dice .tag {
+        background: #ede9fe;
+        color: #6d28d9;
+      }
+
+      .project-card.dice .tag.tag-ai {
+        background: linear-gradient(90deg, #7c3aed, #4f46e5);
+        color: #fff;
+      }
+
       .project-card.collab .proj-title {
         color: #0c4a5e;
       }
@@ -148,8 +187,39 @@
       }
 
       .collab-badge {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.3;
         background: #0e7490;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        padding: 4px 11px;
+        border-radius: 20px;
+        margin-left: 8px;
+        vertical-align: middle;
+      }
+
+      .project-card.collab .tag {
+        background: #cffafe;
+        color: #0e7490;
+      }
+
+      .project-card.github {
+        border-color: var(--teal);
+        background: var(--cert-list);
+      }
+
+      .project-card.github .proj-title {
+        color: #0c4a5e;
+      }
+
+      .github-badge {
+        display: inline-block;
+        background: var(--teal);
         color: #fff;
         font-size: 10px;
         font-weight: 600;
@@ -161,9 +231,9 @@
         vertical-align: middle;
       }
 
-      .project-card.collab .tag {
+      .project-card.github .tag {
         background: #cffafe;
-        color: #0e7490;
+        color: var(--teal);
       }
 
       .live-badge {
@@ -337,6 +407,39 @@
         color: var(--soft);
       }
 
+      .ref-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .ref-item {
+        padding: 12px 14px;
+        border: 1px solid var(--rule);
+        border-radius: 8px;
+        page-break-inside: avoid;
+      }
+
+      .ref-name {
+        font-weight: 600;
+        font-size: 13px;
+        color: var(--ink);
+        margin-bottom: 2px;
+      }
+
+      .ref-title {
+        font-size: 12px;
+        color: var(--soft);
+        line-height: 1.5;
+      }
+
+      .ref-org {
+        font-size: 12px;
+        color: var(--accent);
+        font-weight: 500;
+        margin-top: 4px;
+      }
+
       .cv-footer {
         margin-top: 32px;
         padding-top: 14px;
@@ -390,21 +493,77 @@
     </div>
 
     <div class="pitch">
-      My job title says Talent Acquisition — my work says developer. At
-      <strong>Ericsson</strong> I identified friction in my own workflows and
-      built the tools to fix them: a GUI-based document generator and a print
-      automation CLI, both written in Python on my own initiative and used by me
-      daily. My manager recognised the approach and has asked me to extend the
-      concept for other team members. I also contribute to
-      <strong>DICE</strong>, an internal AI dashboard team, as a process and
-      automation advisor. I have five years of context inside large tech
-      organisations (Ericsson, Infineon, Bosch) — I understand what problems are
-      worth solving and I build the tools to solve them. Now I want the title to
-      match the work.
+      My job title says Talent Acquisition —
+      <strong>HR insider turned builder.</strong> At
+      <strong>Ericsson</strong> I automate the workflows I lived in: Universal
+      HR HUB merges contract generation, vacation calculation, and print
+      automation into a modular desktop platform with
+      <strong>human-in-the-loop</strong> approval before documents ship. I also
+      work with <strong>DICE</strong>, Ericsson's internal
+      <strong>Native AI</strong> dashboard team — as process advisor and
+      unofficial <strong>Scrum Master</strong>, facilitating sprints with mentor
+      support and shadowing another squad through a full delivery workflow. Public proof on GitHub:
+      <strong>Flight Price Tracker</strong> (FastAPI, Railway, Capacitor
+      Android). Five years across Ericsson, Infineon, and Bosch give me the
+      context; Python and AI-assisted development give me the execution. Seeking
+      a junior developer or QA role where that combination matters.
     </div>
 
     <section>
       <div class="section-title">Projects &amp; Built Tools</div>
+
+      <div class="project-card live">
+        <div class="project-header">
+          <span class="proj-title"
+            >Universal HR HUB — HR Document Factory
+            <span class="live-badge">Personal · Used at Ericsson</span></span
+          >
+        </div>
+        <div class="project-desc">
+          The evolved merge of the contract generator and print workflows into a
+          modular desktop platform. Multi-country JSON profiles, automatic
+          <code>{{token}}</code> scanning, a no-code Tab Builder, addon
+          architecture (print automation, vacation calculators), and bulk
+          Word/Excel/PDF export — designed for
+          <strong>human-in-the-loop</strong> steps: calculate, review,
+          generate, approve, then print. Internal tool; portfolio includes an
+          interactive workflow simulation.
+        </div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">CustomTkinter</span>
+          <span class="tag">python-docx</span>
+          <span class="tag">openpyxl</span>
+          <span class="tag">Addon Architecture</span>
+          <span class="tag">PyInstaller</span>
+        </div>
+      </div>
+
+      <div class="project-card dice">
+        <div class="project-header">
+          <span class="proj-title"
+            >DICE — Native AI Dashboard Team
+            <span class="dice-badge">Native AI</span>
+            <span class="collab-badge">Ericsson · Active</span></span
+          >
+        </div>
+        <div class="project-desc">
+          <strong>DICE</strong> is Ericsson's internal squad building business
+          intelligence dashboards on <strong>Native AI</strong>. Outside my core
+          HR role, I serve as process advisor and unofficial Scrum Master:
+          facilitating 2-week sprints with mentor support, mapping workflows,
+          spotting automation opportunities, and shadowing another squad through
+          a full delivery cycle alongside engineers and product owners.
+        </div>
+        <div class="tags">
+          <span class="tag tag-ai">Native AI</span>
+          <span class="tag tag-ai">BI Dashboards</span>
+          <span class="tag">Scrum Master</span>
+          <span class="tag">Agile Delivery</span>
+          <span class="tag">Workflow Design</span>
+          <span class="tag">Cross-functional</span>
+        </div>
+      </div>
 
       <div class="project-card live">
         <div class="project-header">
@@ -419,8 +578,8 @@
           auto-populates <code>{{token}}</code>-based templates, generating
           completed <code>.docx</code> and <code>.xls</code> files — replacing a
           fully manual process. My manager praised the result and has asked me
-          to adapt the concept for other team members, which I am currently
-          working on.
+          to adapt the concept for other team members. This was the original
+          Hungary-focused tkinter prototype — now superseded by Universal HR HUB.
         </div>
         <div class="tags">
           <span class="tag">Python</span>
@@ -444,8 +603,9 @@
           print workflow. An interactive CMD interface guides the user through
           configurable print settings with input validation and error checking,
           then sends files to the network printing server with a real-time
-          progress bar. Written entirely on my own initiative to solve a
-          friction point in my day-to-day work.
+          progress bar. The workflow was later integrated into Universal HR HUB
+          as the Nyomtatás addon; the standalone CLI remains in reference
+          scripts.
         </div>
         <div class="tags">
           <span class="tag">Python</span>
@@ -454,6 +614,34 @@
           <span class="tag">Input Validation</span>
           <span class="tag">Error Handling</span>
           <span class="tag">Network I/O</span>
+        </div>
+      </div>
+
+      <div class="project-card github">
+        <div class="project-header">
+          <span class="proj-title"
+            >Flight Price Tracker
+            <span class="github-badge">GitHub · Open</span></span
+          >
+          <a
+            class="proj-link"
+            href="https://github.com/KrisiBoy/FlightPriceTracker"
+            target="_blank"
+            >↗ View on GitHub</a
+          >
+        </div>
+        <div class="project-desc">
+          Full-stack side project: FastAPI backend deployed on Railway, with a
+          Capacitor Android shell. REST API design, external data integration,
+          and a path from script to shipped product — public proof of backend
+          learning beyond internal tools.
+        </div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Railway</span>
+          <span class="tag">Capacitor</span>
         </div>
       </div>
 
@@ -478,7 +666,6 @@
           <span class="tag">Python</span>
           <span class="tag">OOP</span>
           <span class="tag">Data Structures</span>
-          <span class="tag">CLI</span>
           <span class="tag">FreeCodeCamp</span>
         </div>
       </div>
@@ -494,9 +681,10 @@
           >
         </div>
         <div class="project-desc">
-          Python key-value settings manager with add, update, delete, and view
-          operations, case-normalisation, and defensive input validation. Clean
-          function design with consistent error messaging.
+          Dict-based settings CRUD with add, update, delete, and view
+          operations. Keys and values are normalised to lowercase; duplicate
+          keys are rejected with clear error messages — matching the FCC
+          function-design requirements.
         </div>
         <div class="tags">
           <span class="tag">Python</span>
@@ -507,48 +695,6 @@
         </div>
       </div>
 
-      <div class="project-card collab">
-        <div class="project-header">
-          <span class="proj-title"
-            >DICE — AI Dashboard Team
-            <span class="collab-badge">Ericsson · Active</span></span
-          >
-        </div>
-        <div class="project-desc">
-          Contributing as an outside process consultant to DICE, an internal
-          Ericsson team that delivers business intelligence dashboards powered
-          by Native AI. Analyse existing workflows, identify automation
-          opportunities, and advise on team organisation and process design to
-          help the team ship faster and more reliably. Involvement is
-          manager-supported and cross-functional — working alongside engineers
-          and product stakeholders outside my primary role.
-        </div>
-        <div class="tags">
-          <span class="tag">Process Automation</span>
-          <span class="tag">Workflow Design</span>
-          <span class="tag">AI-powered Dashboards</span>
-          <span class="tag">Cross-functional</span>
-          <span class="tag">Ericsson Internal</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <span class="proj-title"
-            >Currently Learning: FastAPI &amp; Backend Architecture</span
-          >
-        </div>
-        <div class="project-desc">
-          Actively building with FastAPI — REST API design, routing, and
-          database integration.
-        </div>
-        <div class="tags">
-          <span class="tag">FastAPI</span>
-          <span class="tag">REST API</span>
-          <span class="tag">SQL</span>
-          <span class="tag">In Progress</span>
-        </div>
-      </div>
     </section>
 
     <div class="two-col">
@@ -556,21 +702,21 @@
         <div class="section-title">Technical Skills</div>
 
         <div class="skills-group">
-          <div class="skills-label">Languages &amp; Frameworks</div>
+          <div class="skills-label">Languages</div>
           <div class="tags">
-            <span class="tag">Python - Intermediate level</span>
-            <span class="tag">Java - Basic level</span>
+            <span class="tag">Python — intermediate</span>
             <span class="tag">SQL</span>
-            <span class="tag">HTML, CSS basics</span>
+            <span class="tag">Java — basic</span>
+            <span class="tag">HTML &amp; CSS — basics</span>
+          </div>
+        </div>
+
+        <div class="skills-group" style="margin-top: 10px">
+          <div class="skills-label">Frameworks &amp; APIs</div>
+          <div class="tags">
             <span class="tag">FastAPI</span>
-            <span class="tag">TCP/IP</span>
-            <span class="tag">Optical fiber system design</span>
-            <span class="tag">IT Infrastructure Maintenance</span>
-            <span class="tag">CI/CD</span>
-            <span class="tag">OOP</span>
-            <span class="tag">Input Validation</span>
-            <span class="tag">Data Structures</span>
-            <span class="tag">AI agent usage/script writing</span>
+            <span class="tag">REST API</span>
+            <span class="tag">CustomTkinter / tkinter</span>
           </div>
         </div>
 
@@ -579,21 +725,35 @@
           <div class="tags">
             <span class="tag">python-docx</span>
             <span class="tag">openpyxl</span>
-            <span class="tag">tkinter</span>
             <span class="tag">subprocess</span>
-            <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
+            <span class="tag">PyInstaller</span>
+            <span class="tag">Capacitor</span>
+            <span class="tag">Railway</span>
+            <span class="tag">Git &amp; GitHub</span>
             <span class="tag">Jira</span>
           </div>
         </div>
 
         <div class="skills-group" style="margin-top: 10px">
-          <div class="skills-label">Transferable Strengths</div>
+          <div class="skills-label">Practices &amp; Methods</div>
           <div class="tags">
+            <span class="tag">OOP</span>
+            <span class="tag">Data Structures</span>
+            <span class="tag">Input Validation</span>
+            <span class="tag">Scrum / Agile</span>
             <span class="tag">Process Automation</span>
-            <span class="tag">Data Analytics</span>
-            <span class="tag">Cross-functional Collaboration</span>
-            <span class="tag">Business Requirements</span>
+            <span class="tag">Human-in-the-loop workflows</span>
+            <span class="tag">AI-assisted development</span>
+            <span class="tag">Generative AI (Skillsoft cert)</span>
+          </div>
+        </div>
+
+        <div class="skills-group" style="margin-top: 10px">
+          <div class="skills-label">Infrastructure Background</div>
+          <div class="tags">
+            <span class="tag">TCP/IP</span>
+            <span class="tag">IT Infrastructure Maintenance</span>
+            <span class="tag">Optical fiber system design</span>
           </div>
         </div>
       </section>
@@ -625,12 +785,14 @@
         <ul class="exp-bullets">
           <li>
             <strong>Agile Leadership & Project Governance (DICE Team):</strong>
-            Personally requested by the Head of Program Office & Operations to
-            transition into an unofficial
-            <strong>Scrum Master</strong> role for the Summer 2026 cycle.
-            Entrusted with guiding a cross-functional squad of 9 development
-            interns, facilitating daily standups, and managing 2-week sprint
-            backlogs.
+            Personally requested by Olga Papp, Head of Program and DICE team
+            lead, to serve as an unofficial
+            <strong>Scrum Master</strong> for the
+            <strong>DICE Native AI</strong> dashboard team — ongoing. Facilitating
+            2-week sprints for a squad of software engineering interns, daily
+            standups, and sprint backlogs, with an assigned mentor and permission
+            to shadow another team through a full delivery workflow from planning
+            to demo.
           </li>
           <li>
             <strong>Python Automation:</strong> Developed and deployed custom
@@ -643,8 +805,8 @@
             into robust, multi-user scripts for departmental deployment
           </li>
           <li>
-            Partner with the internal DICE AI Dashboard project group as an
-            automated workflow and operational process consultant
+            Partner with the internal <strong>DICE Native AI</strong> dashboard
+            team as a workflow and operational process consultant
           </li>
           <li>
             Led cross-functional hiring initiatives and KPI reporting to senior
@@ -773,9 +935,25 @@
       </div>
     </section>
 
+    <section>
+      <div class="section-title">References</div>
+      <div class="ref-grid">
+        <div class="ref-item">
+          <div class="ref-name">Tamás Diener</div>
+          <div class="ref-title">HR Head Hungary</div>
+          <div class="ref-org">Ericsson</div>
+        </div>
+        <div class="ref-item">
+          <div class="ref-name">Olga Papp</div>
+          <div class="ref-title">Head of Program · DICE team lead</div>
+          <div class="ref-org">Ericsson</div>
+        </div>
+      </div>
+    </section>
+
     <div class="cv-footer">
-      References available on request · Kristóf Illés, "To be Developer",
-      Ericsson · github.com/KrisiBoy
+      Kristóf Illés · Junior Developer / QA candidate · github.com/KrisiBoy ·
+      <a href="index.html" style="color: var(--accent)">Portfolio</a>
     </div>
 
     <a

@@ -21,6 +21,9 @@
         --amber-soft: #fffbeb;
         --teal: #0d9488;
         --teal-soft: #f0fdfa;
+        --violet: #7c3aed;
+        --violet-soft: #f5f3ff;
+        --indigo: #4f46e5;
         --border: #e5e7eb;
         --border-strong: #d1d5db;
         --bg: #ffffff;
@@ -292,6 +295,75 @@
       }
       .tool-card.accent-blue::before {
         background: var(--accent);
+      }
+      .tool-card.accent-violet::before {
+        background: linear-gradient(90deg, var(--violet), var(--indigo));
+      }
+
+      .tool-card.tool-card-dice {
+        grid-column: 1 / -1;
+        border: 2px solid var(--violet);
+        background: linear-gradient(
+          135deg,
+          var(--violet-soft) 0%,
+          #faf5ff 40%,
+          var(--bg) 72%
+        );
+        box-shadow: 0 8px 36px rgba(124, 58, 237, 0.14);
+      }
+
+      .tool-card-dice:hover {
+        border-color: var(--indigo);
+        box-shadow: 0 12px 40px rgba(79, 70, 229, 0.18);
+      }
+
+      .tool-card-dice h3 {
+        font-family: "Instrument Serif", serif;
+        font-size: 22px;
+        letter-spacing: -0.3px;
+      }
+
+      .dice-badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+
+      .badge-native-ai {
+        background: linear-gradient(90deg, var(--violet), var(--indigo));
+        color: #fff;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.6px;
+        padding: 4px 11px;
+        border-radius: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        margin-bottom: 12px;
+      }
+
+      .badge-violet {
+        background: var(--violet-soft);
+        color: var(--violet);
+      }
+
+      .tool-card-dice .tech-tag.tech-tag-ai {
+        background: var(--violet-soft);
+        color: var(--violet);
+        border-color: rgba(124, 58, 237, 0.25);
+      }
+
+      .tool-card.tool-card-featured {
+        grid-column: 1 / -1;
+        border-color: var(--accent);
+        background: linear-gradient(180deg, var(--accent-soft) 0%, var(--bg) 48%);
+      }
+
+      .tool-card-featured .tool-tech {
+        margin-bottom: 12px;
       }
 
       .tool-badge {
@@ -782,6 +854,51 @@
         gap: 7px;
       }
 
+      .stack-group {
+        margin-bottom: 14px;
+      }
+
+      .stack-group:last-child {
+        margin-bottom: 0;
+      }
+
+      .stack-group-label {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .ref-block {
+        margin-bottom: 14px;
+      }
+
+      .ref-block:last-child {
+        margin-bottom: 0;
+      }
+
+      .ref-block-name {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .ref-block-title {
+        font-size: 12px;
+        color: var(--soft);
+        line-height: 1.5;
+        margin-top: 2px;
+      }
+
+      .ref-block-org {
+        font-size: 12px;
+        color: var(--accent);
+        font-weight: 500;
+        margin-top: 2px;
+      }
+
       .skill-tag {
         font-family: "Geist Mono", monospace;
         font-size: 12px;
@@ -851,6 +968,389 @@
       .bar-color-4 {
         background: #db2777;
       }
+
+      .demo-pre {
+        font-family: "Geist Mono", monospace;
+        font-size: 11.5px;
+        line-height: 1.45;
+        color: var(--ink);
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 14px;
+        overflow-x: auto;
+        white-space: pre;
+        margin: 0;
+        min-height: 180px;
+      }
+
+      .demo-msg {
+        font-family: "Geist Mono", monospace;
+        font-size: 12px;
+        line-height: 1.6;
+        color: var(--soft);
+        padding: 10px 12px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        margin-top: 8px;
+      }
+
+      .demo-msg.error {
+        color: #b45309;
+        background: var(--amber-soft);
+        border-color: #fcd34d;
+      }
+
+      .demo-msg.success {
+        color: var(--teal);
+        background: var(--teal-soft);
+        border-color: #99f6e4;
+      }
+
+      .demo-btn-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 4px;
+      }
+
+      .demo-btn-row .demo-btn {
+        margin-top: 0;
+        font-size: 13px;
+        padding: 10px;
+      }
+
+      .demo-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .demo-split-block {
+        min-width: 0;
+      }
+
+      @media (max-width: 700px) {
+        .demo-split {
+          grid-template-columns: 1fr;
+        }
+        .demo-btn-row {
+          grid-template-columns: 1fr;
+        }
+        .hub-pipeline {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .hub-pipeline-arrow {
+          display: none;
+        }
+      }
+
+      .hub-shell {
+        border: 2px solid var(--accent);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        background: linear-gradient(180deg, var(--accent-soft) 0%, var(--bg) 120px);
+        margin-bottom: 32px;
+      }
+
+      .hub-titlebar {
+        background: #1e293b;
+        color: #f8fafc;
+        font-family: "Geist Mono", monospace;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .hub-titlebar-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .hub-reset-btn {
+        font-family: "Geist", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        padding: 5px 12px;
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: transparent;
+        color: #e2e8f0;
+        cursor: pointer;
+      }
+
+      .hub-reset-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .hub-titlebar-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+        flex-shrink: 0;
+      }
+
+      .hub-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 12px 20px;
+        background: var(--bg2);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .hub-chip {
+        font-family: "Geist", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 6px 14px;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        background: var(--bg);
+        color: var(--soft);
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+
+      .hub-chip.active {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
+      }
+
+      .hub-chip.done {
+        border-color: var(--teal);
+        color: var(--teal);
+      }
+
+      .hub-pipeline {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 20px;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        flex-wrap: wrap;
+      }
+
+      .hub-step {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--muted);
+        padding: 6px 12px;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        background: var(--bg2);
+      }
+
+      .hub-step.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-soft);
+      }
+
+      .hub-step.done {
+        border-color: var(--teal);
+        color: var(--teal);
+        background: var(--teal-soft);
+      }
+
+      .hub-step-num {
+        font-family: "Geist Mono", monospace;
+        font-size: 11px;
+        font-weight: 600;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--bg3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hub-step.active .hub-step-num {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .hub-step.done .hub-step-num {
+        background: var(--teal);
+        color: #fff;
+      }
+
+      .hub-pipeline-arrow {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .hub-bridge {
+        font-family: "Geist Mono", monospace;
+        font-size: 11px;
+        color: var(--soft);
+        padding: 10px 20px;
+        background: var(--bg3);
+        border-bottom: 1px solid var(--border);
+        line-height: 1.6;
+      }
+
+      .hub-bridge strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .tools-legacy-group {
+        grid-column: 1 / -1;
+        padding: 16px 20px 4px;
+        border: 1px dashed var(--border-strong);
+        border-radius: var(--radius-lg);
+        background: var(--bg2);
+      }
+
+      .tools-legacy-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 16px;
+      }
+
+      .tools-public-group {
+        grid-column: 1 / -1;
+        padding: 16px 20px 4px;
+        border: 1px dashed var(--teal);
+        border-radius: var(--radius-lg);
+        background: var(--teal-soft);
+      }
+
+      .tools-public-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--teal);
+        margin-bottom: 16px;
+      }
+
+      .tools-public-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+      }
+
+      .tool-card.tool-card-public-featured {
+        border-color: var(--teal);
+        background: linear-gradient(180deg, #f0fdfa 0%, var(--bg) 55%);
+      }
+
+      .about-ai-card {
+        background: var(--accent-soft);
+        border-color: var(--accent);
+      }
+
+      .about-ai-card p {
+        font-size: 13px;
+        color: var(--soft);
+        line-height: 1.65;
+        margin-bottom: 0;
+      }
+
+      .tools-legacy-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+      }
+
+      .hub-panel {
+        display: none;
+        padding: 28px;
+      }
+
+      .hub-panel.active {
+        display: block;
+      }
+
+      .hub-addon-badge {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--accent);
+        background: var(--accent-soft);
+        padding: 3px 8px;
+        border-radius: 4px;
+        margin-bottom: 12px;
+      }
+
+      .cert-demo-heading {
+        font-family: "Instrument Serif", serif;
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--accent);
+        margin: 48px 0 16px;
+        letter-spacing: 0.5px;
+      }
+
+      .cert-demo-sub {
+        font-size: 14px;
+        color: var(--soft);
+        margin-bottom: 16px;
+      }
+
+      .hub-apply-btn {
+        margin-top: 12px;
+        background: var(--accent);
+      }
+
+      .hub-apply-btn:hover {
+        background: #1d4ed8;
+      }
+
+      .print-job-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+
+      .print-job-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        color: var(--ink);
+      }
+
+      .print-job-item input {
+        width: 16px;
+        height: 16px;
+        accent-color: var(--accent);
+      }
+
+      .contract-engine-badge {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 600;
+        color: var(--teal);
+        background: var(--teal-soft);
+        padding: 2px 8px;
+        border-radius: 4px;
+        margin-left: 8px;
+        vertical-align: middle;
+      }
     </style>
   </head>
   <body>
@@ -881,7 +1381,7 @@
 
       <ul class="nav-links">
         <li><a href="#tools">Tools</a></li>
-        <li><a href="#demo">Playground</a></li>
+        <li><a href="#hub-demo">Playground</a></li>
         <li><a href="#journey">Journey</a></li>
         <li><a href="#about">About</a></li>
       </ul>
@@ -900,17 +1400,18 @@
             </h1>
             <p class="hero-pitch">
               My job title says Talent Acquisition.<br />
-              <strong>My work says developer.</strong><br /><br />
-              I build Python tools at Ericsson that automate real workflows —
-              because I understand the problems from the inside. Five years
-              across Ericsson, Infineon and Bosch, writing code that actually
-              gets used.
+              <strong>HR insider turned builder.</strong><br /><br />
+              I automate the workflows I lived in — from Universal HR HUB at
+              Ericsson (human-in-the-loop document pipelines) to public FastAPI
+              projects on GitHub. Five years across Ericsson, Infineon and Bosch
+              give me the context; Python and AI-assisted development give me the
+              execution.
             </p>
             <div class="hero-actions">
               <a
                 href="https://github.com/KrisiBoy"
                 target="_blank"
-                class="btn btn-primary"
+                class="btn btn-secondary"
               >
                 <svg
                   width="16"
@@ -965,8 +1466,30 @@
                   <line x1="16" y1="17" x2="8" y2="17" />
                   <polyline points="10 9 9 9 8 9" />
                 </svg>
-                Download CV
+                View CV
               </a>
+              <a
+                href="CV/Illés Kristóf — Developer CV.pdf"
+                download
+                class="btn btn-secondary"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download PDF
+              </a>
+              <a href="#hub-demo" class="btn btn-primary">Try HR HUB demo</a>
             </div>
             <div class="hero-meta">
               <span class="hero-meta-item">
@@ -1044,12 +1567,46 @@
     <section id="tools">
       <div class="container">
         <div class="section-label">What I've built</div>
-        <h2>Tools used at Ericsson</h2>
+        <h2>Production tools &amp; public code</h2>
         <p class="section-sub">
-          Built on my own initiative to solve real friction in my daily work.
-          These aren't exercises — they're things I needed, so I built them.
+          Internal Ericsson automation I use daily — with a live portfolio demo
+          for the workflow — plus open-source projects on GitHub that prove my
+          backend and Python fundamentals.
         </p>
         <div class="tools-grid reveal">
+          <div class="tool-card accent-blue tool-card-featured">
+            <span class="tool-badge badge-blue"
+              >Personal · Used at Ericsson</span
+            >
+            <h3>Universal HR HUB — HR Document Factory</h3>
+            <p>
+              The evolved merge of the contract generator and print workflows
+              into a modular desktop platform. Multi-country JSON profiles,
+              automatic <code>{{token}}</code> scanning, a no-code Tab Builder,
+              addon architecture, and bulk Word/Excel/PDF export — designed for
+              <strong>human-in-the-loop</strong> steps: calculate, review,
+              generate, approve, then print. Internal tool; the
+              <a href="#hub-demo" style="color: var(--accent); font-weight: 500"
+                >live demo below</a
+              >
+              simulates the workflow.
+            </p>
+            <div class="tool-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">CustomTkinter</span>
+              <span class="tech-tag">python-docx</span>
+              <span class="tech-tag">openpyxl</span>
+              <span class="tech-tag">Addon Architecture</span>
+              <span class="tech-tag">PyInstaller</span>
+            </div>
+            <a href="#hub-demo" class="tool-link">Try the live demo ↓</a>
+          </div>
+
+          <div class="tools-legacy-group">
+            <div class="tools-legacy-label">
+              Evolution — merged into Universal HR HUB
+            </div>
+            <div class="tools-legacy-grid">
           <div class="tool-card accent-amber">
             <span class="tool-badge badge-amber"
               >Personal · Used at Ericsson</span
@@ -1060,7 +1617,8 @@
               auto-populates <code>{{token}}</code>-based templates, generating
               complete <code>.docx</code> and <code>.xls</code> files. My
               manager saw it and asked me to extend the concept for other team
-              members globally.
+              members globally. This was the original Hungary-focused tkinter
+              prototype — now superseded by Universal HR HUB.
             </p>
             <div class="tool-tech">
               <span class="tech-tag">Python</span>
@@ -1068,7 +1626,6 @@
               <span class="tech-tag">python-docx</span>
               <span class="tech-tag">openpyxl</span>
               <span class="tech-tag">File I/O</span>
-              <span class="tech-tag">AI</span>
             </div>
           </div>
 
@@ -1081,7 +1638,9 @@
               An interactive CMD tool that guides users through configurable
               print settings with input validation and error checking, then
               sends files to the company's network print server with a real-time
-              progress bar.
+              progress bar. The workflow was later integrated into Universal HR
+              HUB as the Nyomtatás addon; the standalone CLI remains in
+              reference scripts.
             </p>
             <div class="tool-tech">
               <span class="tech-tag">Python</span>
@@ -1089,28 +1648,87 @@
               <span class="tech-tag">subprocess</span>
               <span class="tech-tag">Error Handling</span>
               <span class="tech-tag">Network I/O</span>
-              <span class="tech-tag">AI</span>
+            </div>
+          </div>
             </div>
           </div>
 
-          <div class="tool-card accent-blue">
-            <span class="tool-badge badge-blue"
-              >Ericsson Internal · Active</span
-            >
-            <h3>DICE — AI Dashboard Team</h3>
+          <div class="tool-card accent-violet tool-card-dice">
+            <div class="dice-badge-row">
+              <span class="badge-native-ai">Native AI</span>
+              <span class="tool-badge badge-violet"
+                >Ericsson Internal · Active</span
+              >
+              <span class="tool-badge badge-violet"
+                >Unofficial Scrum Master</span
+              >
+            </div>
+            <h3>DICE — Native AI Dashboard Team</h3>
             <p>
-              Contributing as a process consultant to DICE, an internal Ericsson
-              team delivering business intelligence dashboards powered by Native
-              AI. I analyse workflows, identify automation opportunities, and
-              advise on team organisation.
+              <strong>DICE</strong> is Ericsson's internal squad building
+              business intelligence dashboards on
+              <strong>Native AI</strong> — turning enterprise data into
+              actionable views for stakeholders. Outside my core HR role, I serve
+              as process advisor and unofficial Scrum Master: facilitating
+              2-week sprints with mentor support, mapping workflows, spotting
+              automation opportunities, and shadowing another squad through a
+              full delivery cycle alongside engineers and product owners.
             </p>
             <div class="tool-tech">
-              <span class="tech-tag">Process Automation</span>
+              <span class="tech-tag tech-tag-ai">Native AI</span>
+              <span class="tech-tag tech-tag-ai">BI Dashboards</span>
+              <span class="tech-tag">Scrum Master</span>
+              <span class="tech-tag">Agile Delivery</span>
               <span class="tech-tag">Workflow Design</span>
-              <span class="tech-tag">AI Dashboards</span>
               <span class="tech-tag">Cross-functional</span>
             </div>
           </div>
+
+          <div class="tools-public-group">
+            <div class="tools-public-label">Public code on GitHub</div>
+            <div class="tools-public-grid">
+              <div
+                class="tool-card accent-teal tool-card-public-featured"
+                style="border-style: solid"
+              >
+                <span class="tool-badge badge-teal">GitHub · Open</span>
+                <h3>Flight Price Tracker</h3>
+                <p>
+                  Full-stack side project: FastAPI backend, deployed on Railway,
+                  with a Capacitor Android shell. REST API design, external data
+                  integration, and a path from script to shipped product —
+                  public proof of my backend learning beyond internal tools.
+                </p>
+                <div class="tool-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">REST API</span>
+                  <span class="tech-tag">Railway</span>
+                  <span class="tech-tag">Capacitor</span>
+                </div>
+                <a
+                  href="https://github.com/KrisiBoy/FlightPriceTracker"
+                  target="_blank"
+                  class="tool-link"
+                >
+                  View on GitHub
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
 
           <div class="tool-card" style="border-style: dashed">
             <span
@@ -1128,7 +1746,6 @@
               <span class="tech-tag">Python</span>
               <span class="tech-tag">OOP</span>
               <span class="tech-tag">Data Structures</span>
-              <span class="tech-tag">CLI</span>
             </div>
 
             <a
@@ -1164,19 +1781,16 @@
             >
             <h3>User Configuration Manager</h3>
             <p>
-              FreeCodeCamp certification project. A structured command-line
-              application built with object-oriented Python to manage user
-              profiles and system settings. Features an interactive menu loop
-              with strict input validation and robust error handling to guide
-              user choices. Designed with clean class architecture and efficient
-              data structures for easy maintenance and scalability.
+              FreeCodeCamp certification project. Dict-based settings CRUD with
+              add, update, delete, and view operations. Keys and values are
+              normalised to lowercase; duplicate keys are rejected with clear
+              error messages — matching the FCC function-design requirements.
             </p>
             <div class="tool-tech">
               <span class="tech-tag">Python</span>
-              <span class="tech-tag">OOP</span>
-              <span class="tech-tag">CLI</span>
+              <span class="tech-tag">Dictionaries</span>
               <span class="tech-tag">Input Validation</span>
-              <span class="tech-tag">Data Structures</span>
+              <span class="tech-tag">Function Design</span>
             </div>
 
             <a
@@ -1203,6 +1817,8 @@
               </svg>
             </a>
           </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1210,69 +1826,121 @@
     <section id="demo">
       <div class="container">
         <div class="section-label">Try it live</div>
-        <h2>Interactive Python Playground</h2>
+        <h2>Interactive Tool Playground</h2>
         <p class="section-sub">
-          The logic running below is real Python — the same patterns I use in my
-          tools. Try it yourself.
+          Walk through the Universal HR HUB workflow — internal tool, interactive
+          simulation below. Vacation tokens flow into the contract engine, then
+          documents go to the print queue. Cert project demos are below.
         </p>
 
-        <div class="demo-wrapper reveal">
-          <div class="demo-tabs">
-            <button class="demo-tab active" onclick="switchTab('budget', this)">
-              Budget Tracker
-            </button>
-            <button class="demo-tab" onclick="switchTab('contract', this)">
-              Contract Generator
+        <div id="hub-demo" class="hub-shell reveal">
+          <div class="hub-titlebar">
+            <span class="hub-titlebar-left">
+              <span class="hub-titlebar-dot"></span>
+              Universal HR HUB · HR Document Factory
+            </span>
+            <button
+              type="button"
+              class="hub-reset-btn"
+              onclick="resetHubWorkflow()"
+            >
+              Reset workflow
             </button>
           </div>
+          <div class="hub-toolbar">
+            <button
+              type="button"
+              class="hub-chip active"
+              id="hub-chip-vacation"
+              onclick="switchHubTab('vacation')"
+            >
+              Vacation Calc
+            </button>
+            <button
+              type="button"
+              class="hub-chip"
+              id="hub-chip-contract"
+              onclick="switchHubTab('contract')"
+            >
+              Document Engine
+            </button>
+            <button
+              type="button"
+              class="hub-chip"
+              id="hub-chip-print"
+              onclick="switchHubTab('print')"
+            >
+              Nyomtatás (Print)
+            </button>
+          </div>
+          <div class="hub-pipeline">
+            <div class="hub-step active" id="hub-step-1">
+              <span class="hub-step-num">1</span>
+              Vacation tokens
+            </div>
+            <span class="hub-pipeline-arrow">→</span>
+            <div class="hub-step" id="hub-step-2">
+              <span class="hub-step-num">2</span>
+              Generate contract
+            </div>
+            <span class="hub-pipeline-arrow">→</span>
+            <div class="hub-step" id="hub-step-3">
+              <span class="hub-step-num">3</span>
+              Print queue
+            </div>
+          </div>
+          <div class="hub-bridge" id="hub-bridge">
+            <strong>Shared state:</strong> No tokens yet — start with Vacation
+            Calc
+          </div>
 
-          <div class="demo-panel active" id="tab-budget">
+          <div class="hub-panel active" id="hub-tab-vacation">
+            <span class="hub-addon-badge">Addon · Hungary Vacation Calculator</span>
             <div class="demo-row">
               <div>
                 <div class="demo-form-group">
-                  <label class="demo-label">Category name</label>
+                  <label class="demo-label">Birth date or year</label>
                   <input
                     class="demo-input"
-                    id="b-cat"
+                    id="v-birth"
                     type="text"
-                    placeholder="e.g. Food, Transport, Rent"
+                    placeholder="e.g. 1985 or 1990.05.15"
                   />
                 </div>
                 <div class="demo-form-group">
-                  <label class="demo-label">Amount (HUF)</label>
+                  <label class="demo-label">Children under 16</label>
                   <input
                     class="demo-input"
-                    id="b-amt"
+                    id="v-children"
                     type="number"
-                    placeholder="0"
                     min="0"
-                    step="10"
+                    max="10"
+                    value="0"
                   />
                 </div>
-                <button class="demo-btn" onclick="addBudgetEntry()">
-                  + Add entry
+                <div class="demo-form-group">
+                  <label class="demo-label">Employment start date</label>
+                  <input class="demo-input" id="v-start" type="date" />
+                </div>
+                <button class="demo-btn" onclick="calculateVacation()">
+                  Calculate vacation days
                 </button>
                 <button
-                  class="demo-btn"
-                  onclick="clearBudget()"
-                  style="
-                    margin-top: 8px;
-                    background: transparent;
-                    color: var(--soft);
-                    border: 1px solid var(--border);
-                  "
+                  class="demo-btn hub-apply-btn"
+                  onclick="applyVacationToContract()"
                 >
-                  Clear all
+                  Apply tokens to contract →
                 </button>
+                <div id="vacation-msg"></div>
               </div>
               <div>
-                <div class="demo-output" id="budget-output">
-                  <div class="demo-output-title">Spend by category</div>
-                  <div id="budget-chart-area">
+                <div class="demo-output">
+                  <div class="demo-output-title">Calculation breakdown</div>
+                  <div id="vacation-output">
                     <div class="empty-state">
-                      <div class="empty-icon">📊</div>
+                      <div class="empty-icon">🏖️</div>
                       <div class="empty-text">
-                        Add an entry to see your chart
+                        Enter dates and calculate prorated vacation days
                       </div>
                     </div>
                   </div>
@@ -1281,7 +1949,8 @@
             </div>
           </div>
 
-          <div class="demo-panel" id="tab-contract">
+          <div class="hub-panel" id="hub-tab-contract">
+            <span class="hub-addon-badge">Core · Document Engine</span>
             <div class="demo-row">
               <div>
                 <div class="demo-form-group">
@@ -1315,17 +1984,247 @@
                     placeholder="e.g. Engineering"
                   />
                 </div>
+                <div class="demo-form-group">
+                  <label class="demo-label">Base salary (HUF)</label>
+                  <input
+                    class="demo-input"
+                    id="c-salary"
+                    type="text"
+                    placeholder="e.g. 850000"
+                  />
+                </div>
+                <div class="demo-form-group">
+                  <label class="demo-label">Contract type</label>
+                  <input
+                    class="demo-input"
+                    id="c-type"
+                    type="text"
+                    placeholder="e.g. Indefinite"
+                  />
+                </div>
                 <button class="demo-btn" onclick="generateContract()">
                   Generate document preview
                 </button>
+                <div id="contract-msg"></div>
               </div>
               <div>
                 <div class="demo-output" id="contract-output">
-                  <div class="demo-output-title">Document preview</div>
                   <div id="contract-preview-area">
                     <div class="empty-state">
                       <div class="empty-icon">📄</div>
                       <div class="empty-text">Fill the fields and generate</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hub-panel" id="hub-tab-print">
+            <span class="hub-addon-badge">Addon · Nyomtatás (Print Automation)</span>
+            <div class="demo-row">
+              <div>
+                <div class="demo-form-group">
+                  <label class="demo-label">Printer</label>
+                  <input
+                    class="demo-input"
+                    id="p-printer"
+                    type="text"
+                    value="PULLPRINT"
+                  />
+                </div>
+                <div class="demo-form-group">
+                  <label class="demo-label">Duplex mode</label>
+                  <select class="demo-input" id="p-duplex">
+                    <option value="none">Single-sided (none)</option>
+                    <option value="short">Duplex short edge</option>
+                    <option value="long">Duplex long edge</option>
+                  </select>
+                </div>
+                <div class="demo-form-group">
+                  <label class="demo-label">Print jobs</label>
+                  <div class="print-job-list">
+                    <label class="print-job-item">
+                      <input type="checkbox" id="p-job-contract" checked />
+                      Employment contract (.docx)
+                    </label>
+                    <label class="print-job-item">
+                      <input type="checkbox" id="p-job-medical" />
+                      Medical form (PDF)
+                    </label>
+                    <label class="print-job-item">
+                      <input type="checkbox" id="p-job-separator" checked />
+                      Separator sheet (PDF)
+                    </label>
+                  </div>
+                </div>
+                <button class="demo-btn" onclick="startPrintRun()">
+                  Start print run
+                </button>
+                <div id="print-msg"></div>
+              </div>
+              <div>
+                <div class="demo-output">
+                  <div class="demo-output-title">Print queue log</div>
+                  <div id="print-output">
+                    <div class="empty-state">
+                      <div class="empty-icon">🖨️</div>
+                      <div class="empty-text">
+                        Generate a contract first, then start the print run
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="cert-demo-heading">FreeCodeCamp cert projects</h3>
+        <p class="cert-demo-sub">
+          Standalone demos from my Scientific Computing with Python
+          certification.
+        </p>
+
+        <div class="demo-wrapper reveal">
+          <div class="demo-tabs">
+            <button
+              class="demo-tab active"
+              onclick="switchCertTab('budget', this)"
+            >
+              Budget Tracker
+            </button>
+            <button class="demo-tab" onclick="switchCertTab('settings', this)">
+              Settings Manager
+            </button>
+          </div>
+
+          <div class="demo-panel active" id="tab-budget">
+            <div class="demo-row">
+              <div>
+                <div class="demo-form-group">
+                  <label class="demo-label">Category name</label>
+                  <input
+                    class="demo-input"
+                    id="b-cat"
+                    type="text"
+                    placeholder="e.g. Food, Transport, Rent"
+                  />
+                </div>
+                <div class="demo-form-group">
+                  <label class="demo-label">Amount (HUF)</label>
+                  <input
+                    class="demo-input"
+                    id="b-amt"
+                    type="number"
+                    placeholder="0"
+                    min="0"
+                    step="10"
+                  />
+                </div>
+                <div class="demo-form-group">
+                  <label class="demo-label">Description (optional)</label>
+                  <input
+                    class="demo-input"
+                    id="b-desc"
+                    type="text"
+                    placeholder="e.g. Groceries"
+                  />
+                </div>
+                <div class="demo-form-group">
+                  <label class="demo-label">Transfer to category</label>
+                  <input
+                    class="demo-input"
+                    id="b-target"
+                    type="text"
+                    placeholder="Target category for transfer"
+                  />
+                </div>
+                <div class="demo-btn-row">
+                  <button class="demo-btn" onclick="budgetDeposit()">
+                    Deposit
+                  </button>
+                  <button class="demo-btn" onclick="budgetWithdraw()">
+                    Withdraw
+                  </button>
+                </div>
+                <button class="demo-btn" onclick="budgetTransfer()">
+                  Transfer
+                </button>
+                <button
+                  class="demo-btn"
+                  onclick="clearBudget()"
+                  style="
+                    margin-top: 8px;
+                    background: transparent;
+                    color: var(--soft);
+                    border: 1px solid var(--border);
+                  "
+                >
+                  Clear all
+                </button>
+                <div id="budget-msg"></div>
+              </div>
+              <div>
+                <div class="demo-output" id="budget-output">
+                  <div class="demo-output-title">Ledger &amp; spend chart</div>
+                  <div id="budget-chart-area">
+                    <div class="empty-state">
+                      <div class="empty-icon">📊</div>
+                      <div class="empty-text">
+                        Add a category and record a withdrawal to see the ASCII
+                        chart
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo-panel" id="tab-settings">
+            <div class="demo-row">
+              <div>
+                <div class="demo-form-group">
+                  <label class="demo-label">Setting key</label>
+                  <input
+                    class="demo-input"
+                    id="s-key"
+                    type="text"
+                    placeholder="e.g. theme"
+                  />
+                </div>
+                <div class="demo-form-group">
+                  <label class="demo-label">Setting value</label>
+                  <input
+                    class="demo-input"
+                    id="s-val"
+                    type="text"
+                    placeholder="e.g. dark"
+                  />
+                </div>
+                <div class="demo-btn-row">
+                  <button class="demo-btn" onclick="settingsAdd()">Add</button>
+                  <button class="demo-btn" onclick="settingsUpdate()">
+                    Update
+                  </button>
+                </div>
+                <div class="demo-btn-row">
+                  <button class="demo-btn" onclick="settingsDelete()">
+                    Delete
+                  </button>
+                  <button class="demo-btn" onclick="settingsView()">View</button>
+                </div>
+              </div>
+              <div>
+                <div class="demo-output">
+                  <div class="demo-output-title">Operation result</div>
+                  <div id="settings-output">
+                    <div class="empty-state">
+                      <div class="empty-icon">⚙️</div>
+                      <div class="empty-text">
+                        Add, update, delete, or view settings
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1350,39 +2249,48 @@
             <div class="timeline-dot current"></div>
             <div class="timeline-date">Ongoing</div>
             <div class="timeline-title">
-              Upcoming: Scrum Master for DICE AI Team (Summer 2026)
+              Unofficial Scrum Master — DICE Native AI team
             </div>
             <div class="timeline-desc">
-              Spanning outside my core operational role, the Head of Program
-              Office & Operations, leader of the DICE AI Dashboard team invited
-              me to step up as an unofficial Scrum Master to lead their upcoming
-              summer development cycle. Team Coordination: Facilitating agile
-              delivery for a dedicated squad of 9 software engineering interns.
-              Agile Ceremonies: Driving high-velocity 2-week sprints, removing
-              technical blockers during daily standups, and running
-              end-of-sprint demo presentations.
+              Stepping up as an unofficial Scrum Master for
+              <strong>DICE</strong>, Ericsson's internal Native AI dashboard
+              squad — at the request of Olga Papp, Head of Program and DICE team
+              lead — for the summer development cycle, ongoing. Facilitating
+              2-week sprints for a squad of software engineering interns, daily
+              standups, blocker removal, and end-of-sprint demos. Supported by
+              an assigned mentor and cross-team exposure: shadowing another squad
+              through a full delivery workflow from planning to demo.
             </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot current"></div>
             <div class="timeline-date">2026 — ongoing</div>
-            <div class="timeline-title">FastAPI & backend architecture</div>
+            <div class="timeline-title">Flight Price Tracker — public FastAPI project</div>
             <div class="timeline-desc">
-              Building REST APIs with FastAPI — routing, dependency injection,
-              database integration with SQLAlchemy. Preparing to bring API-layer
-              thinking to internal tooling.
+              Building and shipping
+              <a
+                href="https://github.com/KrisiBoy/FlightPriceTracker"
+                target="_blank"
+                style="color: var(--accent)"
+                >Flight Price Tracker</a
+              >
+              on GitHub — FastAPI backend deployed on Railway, Capacitor Android
+              shell. REST API design, external data integration, and a path from
+              script to shipped product alongside internal tooling.
             </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot current"></div>
             <div class="timeline-date">2026 - ongoing</div>
-            <div class="timeline-title">Joined DICE at Ericsson</div>
+            <div class="timeline-title">Joined DICE — Native AI at Ericsson</div>
             <div class="timeline-desc">
-              Started contributing to Ericsson's internal AI dashboard team as a
-              process and automation advisor — my first cross-team engineering
-              collaboration.
+              Started contributing to Ericsson's internal
+              <strong>DICE</strong> team — building business intelligence
+              dashboards on Native AI — as a process and automation advisor,
+              mapping workflows and advising on delivery alongside engineers
+              and product stakeholders.
             </div>
           </div>
 
@@ -1404,23 +2312,24 @@
             <div class="timeline-desc">
               Built the GUI-based contract generator in Python. My manager
               praised it and asked me to extend the concept for other HR teams
-              globally.First tool that another person (my manager) noticed and responded to.
+              globally. First tool that another person (my manager) noticed and
+              responded to.
             </div>
           </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2025 - <span style="font-size: 1.6rem;display: inline-block; vertical-align: middle; line-height: 1;">∞</span></div>
-          <div class="timeline-title">Continuous Learning & Technical Certifications</div>
-          <div class="timeline-desc">
-                <p style="margin-bottom: 12px;">Dedicated to continuous upskriving by mastering software engineering foundational workflows, modern programming paradigms, and enterprise tech stacks through structured curricula:</p>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025 - <span style="font-size: 1.6rem;display: inline-block; vertical-align: middle; line-height: 1;">∞</span></div>
+            <div class="timeline-title">Continuous Learning & Technical Certifications</div>
+            <div class="timeline-desc">
+                <p style="margin-bottom: 12px;">Dedicated to continuous upskilling by mastering software engineering foundational workflows, modern programming paradigms, and enterprise tech stacks through structured curricula:</p>
                 
                 <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.6;">
                     <li style="margin-bottom: 8px;">
                         <strong>FreeCodeCamp (Scientific Computing with Python):</strong> Built foundational algorithmic thinking and data structures; completed core projects including the Budget Tracker and User Configuration Manager.
                     </li>
                     <li style="margin-bottom: 8px;">
-                        <strong>Skillsoft (Pythonista + Machine Learning track):</strong> Completed advanced Python and ML training modules at Ericsson, focusing on Generative AI integration and automated scripting pipelines.
+                        <strong>Skillsoft (Pythonista + Machine Learning track):</strong> Completed advanced Python and ML training modules at Ericsson, including Generative AI (Skillsoft cert) and ML fundamentals.
                     </li>
                     <li style="margin-bottom: 4px;">
                         <strong>Forage Enterprise Simulations (BCG, Datacom, Siemens):</strong> Completed hands-on practical simulations covering IT Architecture, Software Development, and modern project management frameworks.
@@ -1430,7 +2339,9 @@
                     </li>
                 </ul>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="about">
@@ -1447,18 +2358,30 @@
               someone else to.
             </p>
             <p>
-              So I started. I taught myself Python, built two automation tools I
-              now use daily at Ericsson, and got asked to extend them for teams
-              globally — all without a developer job title. I also contribute to
-              DICE, an internal AI dashboard team, where I bridge the gap
-              between engineering and business process.
+              So I started. I taught myself Python, built automation tools on my
+              own initiative, and evolved them into Universal HR HUB — a modular
+              platform I use daily at Ericsson, built around
+              <strong>human-in-the-loop</strong> steps before documents are
+              exported or sent to print. I got asked to extend the concept for
+              teams globally, all without a developer job title. I also work with
+              DICE, Ericsson's internal <strong>Native AI</strong> dashboard
+              team, as process advisor and unofficial Scrum Master — facilitating
+              sprints with mentor support while shadowing another team through a
+              full delivery workflow.
+            </p>
+            <p>
+              I use AI daily to speed up design, prototyping, and documentation
+              — but I still own architecture, validation, and release decisions.
+              My automation follows a clear pattern: calculate, review, generate,
+              approve, then ship. I'm growing toward workflow architecture while
+              still building the first version myself.
             </p>
             <p>
               My edge is context. I don't just write code — I understand
               <strong>why the problem exists</strong>, who it affects, and what
               "good enough" actually means inside a large organisation. I'm
-              looking to make the transition official and grow fast inside
-              Ericsson as a junior developer.
+              targeting a junior developer or QA role where that HR and process
+              depth is an asset, not a footnote.
             </p>
             <p style="margin-top: 24px">
               <a
@@ -1547,75 +2470,139 @@
             </div>
 
             <div class="aside-card">
-              <h4>Reference</h4>
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  gap: 12px;
-                  margin-bottom: 10px;
-                "
-              >
+              <h4>References</h4>
+              <div class="ref-block">
                 <div
                   style="
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    background: var(--bg3);
-                    border: 1px solid var(--border);
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 13px;
-                    font-weight: 600;
-                    color: var(--soft);
-                    flex-shrink: 0;
+                    align-items: flex-start;
+                    gap: 12px;
                   "
                 >
-                  TD
-                </div>
-                <div>
-                  <!--
-                  <div style="font-size: 14px; font-weight: 600; color: var(--ink)">
-                    Tamás Diener
+                  <div
+                    style="
+                      width: 40px;
+                      height: 40px;
+                      border-radius: 50%;
+                      background: var(--bg3);
+                      border: 1px solid var(--border);
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 13px;
+                      font-weight: 600;
+                      color: var(--soft);
+                      flex-shrink: 0;
+                    "
+                  >
+                    TD
                   </div>
-                  <div style="font-size: 12px; color: var(--soft)">
-                    PBP Head Central Europe&Northern Balkans <br />
-                    MEMA People CU SEE CE&North Balkan <br />
-                    Ericsson
+                  <div>
+                    <div class="ref-block-name">Tamás Diener</div>
+                    <div class="ref-block-title">HR Head Hungary</div>
+                    <div class="ref-block-org">Ericsson</div>
                   </div>
-                    -->
                 </div>
               </div>
-              <!--
-              <a
-                href="mailto:tamas.diener@ericsson.com"
-                style="
-                  font-size: 13px;
-                  color: var(--accent);
-                  text-decoration: none;
-                "
-                >tamas.diener@ericsson.com
-            </a>
-              -->
+              <div class="ref-block">
+                <div
+                  style="
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 12px;
+                  "
+                >
+                  <div
+                    style="
+                      width: 40px;
+                      height: 40px;
+                      border-radius: 50%;
+                      background: var(--violet-soft);
+                      border: 1px solid rgba(124, 58, 237, 0.2);
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 13px;
+                      font-weight: 600;
+                      color: var(--violet);
+                      flex-shrink: 0;
+                    "
+                  >
+                    OP
+                  </div>
+                  <div>
+                    <div class="ref-block-name">Olga Papp</div>
+                    <div class="ref-block-title">
+                      Head of Program · DICE team lead
+                    </div>
+                    <div class="ref-block-org">Ericsson</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="aside-card about-ai-card">
+              <h4>How I work with AI</h4>
+              <p>
+                AI-assisted development, not AI-only delivery. I use generative
+                tools to explore options and draft faster — then I validate,
+                refactor, and ship code I can explain. That matches how I build
+                HR automation: people stay in the loop at every approval step.
+              </p>
             </div>
 
             <div class="aside-card">
               <h4>Tech stack</h4>
-              <div class="skills-list">
-                <span class="tech-tag">Python - Intermediate level</span>
-                <span class="tech-tag">Java - Basic level</span>
-                <span class="tech-tag">SQL</span>
-                <span class="tech-tag">HTML, CSS basics</span>
-                <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">Optical fiber system design</span>
-                <span class="tech-tag">IT Infrastructure Maintenance</span>
-                <span class="tech-tag">TCP/IP</span>
-                <span class="tech-tag">CI/CD</span>
-                <span class="tech-tag">OOP</span>
-                <span class="tech-tag">Input Validation</span>
-                <span class="tech-tag">Data Structures</span>
-                <span class="tech-tag">AI agent usage/script writing</span>
+              <div class="stack-group">
+                <div class="stack-group-label">Languages</div>
+                <div class="skills-list">
+                  <span class="tech-tag">Python — intermediate</span>
+                  <span class="tech-tag">SQL</span>
+                  <span class="tech-tag">Java — basic</span>
+                  <span class="tech-tag">HTML &amp; CSS — basics</span>
+                </div>
+              </div>
+              <div class="stack-group">
+                <div class="stack-group-label">Frameworks &amp; APIs</div>
+                <div class="skills-list">
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">REST API</span>
+                  <span class="tech-tag">CustomTkinter / tkinter</span>
+                </div>
+              </div>
+              <div class="stack-group">
+                <div class="stack-group-label">Libraries &amp; Tools</div>
+                <div class="skills-list">
+                  <span class="tech-tag">python-docx</span>
+                  <span class="tech-tag">openpyxl</span>
+                  <span class="tech-tag">subprocess</span>
+                  <span class="tech-tag">PyInstaller</span>
+                  <span class="tech-tag">Capacitor</span>
+                  <span class="tech-tag">Railway</span>
+                  <span class="tech-tag">Git &amp; GitHub</span>
+                  <span class="tech-tag">Jira</span>
+                </div>
+              </div>
+              <div class="stack-group">
+                <div class="stack-group-label">Practices &amp; Methods</div>
+                <div class="skills-list">
+                  <span class="tech-tag">OOP</span>
+                  <span class="tech-tag">Data Structures</span>
+                  <span class="tech-tag">Input Validation</span>
+                  <span class="tech-tag">Scrum / Agile</span>
+                  <span class="tech-tag">Process Automation</span>
+                  <span class="tech-tag">Human-in-the-loop workflows</span>
+                  <span class="tech-tag">AI-assisted development</span>
+                  <span class="tech-tag">Generative AI (Skillsoft cert)</span>
+                </div>
+              </div>
+              <div class="stack-group">
+                <div class="stack-group-label">Infrastructure background</div>
+                <div class="skills-list">
+                  <span class="tech-tag">TCP/IP</span>
+                  <span class="tech-tag">IT Infrastructure Maintenance</span>
+                  <span class="tech-tag">Optical fiber system design</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1638,116 +2625,308 @@
     </footer>
 
     <script>
-      const budgetData = {};
-      const barColors = [
-        "bar-color-0",
-        "bar-color-1",
-        "bar-color-2",
-        "bar-color-3",
-        "bar-color-4",
-      ];
-
-      function addBudgetEntry() {
-        const catInput = document.getElementById("b-cat");
-        const amtInput = document.getElementById("b-amt");
-        const cat = catInput.value.trim();
-        const amt = parseFloat(amtInput.value);
-
-        if (!cat) {
-          alert("Please enter a category name.");
-          catInput.focus();
-          return;
+      class Category {
+        constructor(name) {
+          this.name = name;
+          this.ledger = [];
         }
+
+        deposit(amount, description = "") {
+          this.ledger.push({ amount, description });
+        }
+
+        checkFunds(amount) {
+          return this.getBalance() >= amount;
+        }
+
+        withdraw(amount, description = "") {
+          if (this.checkFunds(amount)) {
+            this.ledger.push({ amount: -amount, description });
+            return true;
+          }
+          return false;
+        }
+
+        getBalance() {
+          return this.ledger.reduce((sum, item) => sum + item.amount, 0);
+        }
+
+        transfer(amount, category) {
+          if (this.checkFunds(amount)) {
+            this.withdraw(amount, `Transfer to ${category.name}`);
+            category.deposit(amount, `Transfer from ${this.name}`);
+            return true;
+          }
+          return false;
+        }
+
+        formatLedger() {
+          const pad = (s, n) => String(s).slice(0, n).padEnd(n);
+          const title =
+            this.name.length >= 30
+              ? this.name + "\n"
+              : "*".repeat(Math.floor((30 - this.name.length) / 2)) +
+                this.name +
+                "*".repeat(Math.ceil((30 - this.name.length) / 2)) +
+                "\n";
+          const items = this.ledger
+            .map(
+              (item) =>
+                `${pad(item.description, 23)}${item.amount.toFixed(2).padStart(7)}`,
+            )
+            .join("\n");
+          return title + items + `\nTotal: ${this.getBalance().toFixed(2)}`;
+        }
+      }
+
+      const budgetCategories = {};
+
+      function getOrCreateCategory(name) {
+        const key = name.trim();
+        if (!key) return null;
+        if (!budgetCategories[key]) {
+          budgetCategories[key] = new Category(key);
+        }
+        return budgetCategories[key];
+      }
+
+      function createSpendChart(categories) {
+        const totalSpent = categories.reduce(
+          (sum, cat) =>
+            sum +
+            cat.ledger
+              .filter((item) => item.amount < 0)
+              .reduce((s, item) => s + -item.amount, 0),
+          0,
+        );
+        if (totalSpent === 0) return "";
+
+        const percentages = categories.map((cat) => {
+          const spent = cat.ledger
+            .filter((item) => item.amount < 0)
+            .reduce((s, item) => s + -item.amount, 0);
+          return (spent / totalSpent) * 100;
+        });
+
+        let chart = "Percentage spent by category\n";
+        for (let i = 100; i >= 0; i -= 10) {
+          chart += `${String(i).padStart(3)}| `;
+          for (const pct of percentages) {
+            chart += pct >= i ? "o  " : "   ";
+          }
+          chart += "\n";
+        }
+        chart += "    " + "-".repeat(categories.length * 3 + 1) + "\n";
+        const maxLength = Math.max(...categories.map((c) => c.name.length));
+        for (let i = 0; i < maxLength; i++) {
+          chart += "     ";
+          for (const cat of categories) {
+            chart += (i < cat.name.length ? cat.name[i] : " ") + "  ";
+          }
+          chart += "\n";
+        }
+        return chart.trimEnd();
+      }
+
+      function showBudgetMsg(text, type) {
+        const el = document.getElementById("budget-msg");
+        el.className = "demo-msg" + (type ? " " + type : "");
+        el.textContent = text;
+      }
+
+      function parseBudgetAmount() {
+        const amt = parseFloat(document.getElementById("b-amt").value);
         if (isNaN(amt) || amt <= 0) {
-          alert("Please enter a valid amount greater than 0.");
-          amtInput.focus();
+          showBudgetMsg("Please enter a valid amount greater than 0.", "error");
+          document.getElementById("b-amt").focus();
+          return null;
+        }
+        return amt;
+      }
+
+      function budgetDeposit() {
+        const cat = document.getElementById("b-cat").value.trim();
+        const amt = parseBudgetAmount();
+        if (!cat || amt === null) {
+          if (!cat) showBudgetMsg("Please enter a category name.", "error");
           return;
         }
+        const category = getOrCreateCategory(cat);
+        const desc = document.getElementById("b-desc").value.trim();
+        category.deposit(amt, desc);
+        showBudgetMsg(`Deposited ${amt.toFixed(0)} HUF to ${cat}.`, "success");
+        renderBudget();
+      }
 
-        budgetData[cat] = (budgetData[cat] || 0) + amt;
-        catInput.value = "";
-        amtInput.value = "";
+      function budgetWithdraw() {
+        const cat = document.getElementById("b-cat").value.trim();
+        const amt = parseBudgetAmount();
+        if (!cat || amt === null) {
+          if (!cat) showBudgetMsg("Please enter a category name.", "error");
+          return;
+        }
+        const category = getOrCreateCategory(cat);
+        const desc = document.getElementById("b-desc").value.trim() || "Withdrawal";
+        if (category.withdraw(amt, desc)) {
+          showBudgetMsg(`Withdrew ${amt.toFixed(0)} HUF from ${cat}.`, "success");
+        } else {
+          showBudgetMsg(
+            `Insufficient funds in ${cat}. Balance: ${category.getBalance().toFixed(0)} HUF.`,
+            "error",
+          );
+        }
+        renderBudget();
+      }
+
+      function budgetTransfer() {
+        const cat = document.getElementById("b-cat").value.trim();
+        const target = document.getElementById("b-target").value.trim();
+        const amt = parseBudgetAmount();
+        if (!cat || !target || amt === null) {
+          showBudgetMsg("Enter source category, target category, and amount.", "error");
+          return;
+        }
+        if (cat.toLowerCase() === target.toLowerCase()) {
+          showBudgetMsg("Source and target must be different categories.", "error");
+          return;
+        }
+        const from = getOrCreateCategory(cat);
+        const to = getOrCreateCategory(target);
+        if (from.transfer(amt, to)) {
+          showBudgetMsg(
+            `Transferred ${amt.toFixed(0)} HUF from ${cat} to ${target}.`,
+            "success",
+          );
+        } else {
+          showBudgetMsg(
+            `Insufficient funds in ${cat}. Balance: ${from.getBalance().toFixed(0)} HUF.`,
+            "error",
+          );
+        }
         renderBudget();
       }
 
       function clearBudget() {
-        for (const k in budgetData) delete budgetData[k];
+        for (const k in budgetCategories) delete budgetCategories[k];
+        document.getElementById("budget-msg").textContent = "";
+        document.getElementById("budget-msg").className = "demo-msg";
         renderBudget();
       }
 
       function renderBudget() {
         const area = document.getElementById("budget-chart-area");
-        const entries = Object.entries(budgetData);
-        if (entries.length === 0) {
+        const categories = Object.values(budgetCategories);
+        if (categories.length === 0) {
           area.innerHTML =
-            '<div class="empty-state"><div class="empty-icon">📊</div><div class="empty-text">Add an entry to see your chart</div></div>';
+            '<div class="empty-state"><div class="empty-icon">📊</div><div class="empty-text">Add a category and record a withdrawal to see the ASCII chart</div></div>';
           return;
         }
-        const total = entries.reduce((s, [, v]) => s + v, 0);
-        const max = Math.max(...entries.map(([, v]) => v));
-        let html = '<div class="budget-chart">';
-        entries.forEach(([cat, val], i) => {
-          const pct = Math.max(Math.round((val / max) * 100), 4);
-          const colorClass = barColors[i % barColors.length];
-          html += `<div class="budget-bar-row">
-      <span class="budget-bar-label" title="${cat}">${cat}</span>
-      <div class="budget-bar-track"><div class="budget-bar-fill ${colorClass}" style="width:${pct}%"></div></div>
-      <span class="budget-bar-val">${val.toFixed(0)} HUF</span>
-    </div>`;
-        });
-        html += `</div><div class="budget-total">
-    <span class="budget-total-label">Total spent</span>
-    <span class="budget-total-val">${total.toFixed(0)} HUF</span>
-  </div>`;
-        area.innerHTML = html;
+
+        const ledgers = categories.map((c) => c.formatLedger()).join("\n\n");
+        const chart = createSpendChart(categories);
+        const chartBlock = chart
+          ? `\n\n${chart}`
+          : "\n\n(No withdrawals yet — chart appears after spending.)";
+
+        area.innerHTML = `<pre class="demo-pre">${escapeHtml(ledgers + chartBlock)}</pre>`;
       }
 
-      document.getElementById("b-amt").addEventListener("keydown", (e) => {
-        if (e.key === "Enter") addBudgetEntry();
-      });
-      document.getElementById("b-cat").addEventListener("keydown", (e) => {
-        if (e.key === "Enter") document.getElementById("b-amt").focus();
-      });
-
-      function generateContract() {
-        const name =
-          document.getElementById("c-name").value.trim() || "{{EMPLOYEE_NAME}}";
-        const pos =
-          document.getElementById("c-pos").value.trim() || "{{POSITION}}";
-        const dept =
-          document.getElementById("c-dept").value.trim() || "{{DEPARTMENT}}";
-        const dateRaw = document.getElementById("c-date").value;
-        const date = dateRaw
-          ? new Date(dateRaw).toLocaleDateString("en-GB", {
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            })
-          : "{{START_DATE}}";
-
-        const val = (s) => `<span class="field-value">${s}</span>`;
-
-        document.getElementById("contract-preview-area").innerHTML = `
-    <div class="contract-preview">
-      <h4>EMPLOYMENT CONTRACT</h4>
-      <div class="contract-line">This contract is entered into between <strong>Ericsson Hungary Ltd.</strong> (the "Company") and ${val(name)} (the "Employee").</div>
-      <br>
-      <div class="contract-line"><strong>Position:</strong> ${val(pos)}</div>
-      <div class="contract-line"><strong>Department:</strong> ${val(dept)}</div>
-      <div class="contract-line"><strong>Start date:</strong> ${val(date)}</div>
-      <div class="contract-line"><strong>Location:</strong> Budapest, Hungary</div>
-      <br>
-      <div class="contract-line" style="font-size:12px;color:var(--muted);border-top:1px dashed var(--border);padding-top:10px;margin-top:4px;">
-        ↑ This is a live preview. In the real tool, this populates a full <code>.docx</code> template with all <code>{{tokens}}</code> replaced and exports to file.
-      </div>
-    </div>`;
+      function escapeHtml(str) {
+        return str
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
       }
 
-      function switchTab(id, btn) {
-        document
+      const settingsStore = {};
+
+      function addSetting(settingsDict, keyValueTuple) {
+        const [key, value] = keyValueTuple;
+        const lowerKey = key.toLowerCase();
+        const lowerValue = value.toLowerCase();
+        if (lowerKey in settingsDict) {
+          return `Setting '${lowerKey}' already exists! Cannot add a new setting with this name.`;
+        }
+        settingsDict[lowerKey] = lowerValue;
+        return `Setting '${lowerKey}' added with value '${lowerValue}' successfully!`;
+      }
+
+      function updateSetting(settingsDict, keyValueTuple) {
+        const [key, value] = keyValueTuple;
+        const lowerKey = key.toLowerCase();
+        const lowerValue = value.toLowerCase();
+        if (lowerKey in settingsDict) {
+          settingsDict[lowerKey] = lowerValue;
+          return `Setting '${lowerKey}' updated to '${lowerValue}' successfully!`;
+        }
+        return `Setting '${lowerKey}' does not exist! Cannot update a non-existing setting.`;
+      }
+
+      function deleteSetting(settingsDict, key) {
+        const lowerKey = key.toLowerCase();
+        if (lowerKey in settingsDict) {
+          delete settingsDict[lowerKey];
+          return `Setting '${lowerKey}' deleted successfully!`;
+        }
+        return `Setting '${lowerKey}' does not exist! Cannot delete a non-existing setting.`;
+      }
+
+      function viewSettings(settingsDict) {
+        if (Object.keys(settingsDict).length === 0) {
+          return "No settings stored.";
+        }
+        return Object.entries(settingsDict)
+          .map(([k, v]) => `${k}: ${v}`)
+          .join("\n");
+      }
+
+      function showSettingsResult(text, isError) {
+        const area = document.getElementById("settings-output");
+        area.innerHTML = `<div class="demo-msg${isError ? " error" : " success"}">${escapeHtml(text)}</div>`;
+      }
+
+      function settingsAdd() {
+        const key = document.getElementById("s-key").value.trim();
+        const val = document.getElementById("s-val").value.trim();
+        if (!key || !val) {
+          showSettingsResult("Both key and value are required.", true);
+          return;
+        }
+        const msg = addSetting(settingsStore, [key, val]);
+        showSettingsResult(msg, msg.includes("already exists"));
+      }
+
+      function settingsUpdate() {
+        const key = document.getElementById("s-key").value.trim();
+        const val = document.getElementById("s-val").value.trim();
+        if (!key || !val) {
+          showSettingsResult("Both key and value are required.", true);
+          return;
+        }
+        const msg = updateSetting(settingsStore, [key, val]);
+        showSettingsResult(msg, msg.includes("does not exist"));
+      }
+
+      function settingsDelete() {
+        const key = document.getElementById("s-key").value.trim();
+        if (!key) {
+          showSettingsResult("Key is required to delete.", true);
+          return;
+        }
+        const msg = deleteSetting(settingsStore, key);
+        showSettingsResult(msg, msg.includes("does not exist"));
+      }
+
+      function settingsView() {
+        showSettingsResult(viewSettings(settingsStore), false);
+      }
+
+      function switchCertTab(id, btn) {
+        const wrapper = btn.closest(".demo-wrapper");
+        wrapper
           .querySelectorAll(".demo-tab")
           .forEach((t) => t.classList.remove("active"));
-        document
+        wrapper
           .querySelectorAll(".demo-panel")
           .forEach((p) => p.classList.remove("active"));
         btn.classList.add("active");
@@ -1767,5 +2946,6 @@
         .querySelectorAll(".reveal")
         .forEach((el) => observer.observe(el));
     </script>
+    <script src="js/hub-demo.js"></script>
   </body>
 </html>

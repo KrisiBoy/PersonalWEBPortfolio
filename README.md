@@ -1,38 +1,44 @@
 # Personal Portfolio & Digital Developer CV
 
-A modern, high-performance personal portfolio and interactive digital CV engineered from scratch using semantic HTML5 and vanilla CSS3. This repository showcases my technical engineering capabilities, real-world Python automation products, and corporate experience in transition toward a Junior Software Developer or Test Automation (QA) position.
+A modern personal portfolio and interactive digital CV built with semantic HTML5 and vanilla CSS/JS. Deployed at [krisithecoder.hu](https://krisithecoder.hu).
 
-## 🚀 Live Visuals & Architecture
+## Site structure
 
-The deployment contains two tightly decoupled web interfaces optimized for all modern desktop and mobile viewports:
+```
+PersonalWEB/
+├── index.html              Portfolio hub (tools, HR HUB demo, cert playgrounds)
+├── IK_Developer_CV.html    ATS-friendly digital CV
+├── js/hub-demo.js          Universal HR HUB interactive workflow demo
+├── Pictures/               Avatar and hero images
+├── CV/                     Downloadable PDF resume
+└── CNAME                   Custom domain (krisithecoder.hu)
+```
 
-1. **Interactive Portfolio Hub (`Personal Portfolio.html`):** Features custom interactive tool playgrounds, navigation nodes, and smooth UI layout transitions.
-2. **Professional Digital CV (`IK_Developer_CV.html`):** A minimalist, matrix-structured resume engineered cleanly to map directly against Automated Tracking Systems (ATS).
+## Live pages
 
----
+1. **Portfolio (`index.html`)** — Tool showcase with a connected Universal HR HUB demo (vacation calc → contract engine → print queue) plus FreeCodeCamp cert playgrounds.
+2. **Digital CV (`IK_Developer_CV.html`)** — Minimalist resume formatted for ATS and recruiters.
 
-## 🛠️ Tech Stack & Technical Implementation
+## Featured work
 
-- **Frontend Architecture:** Semantic HTML5, Vanilla CSS3 (Custom properties/variables, CSS Flexbox grid structures, CSS variables fallback architecture).
-- **Typography & UI Elements:** Integrated dynamic web font hierarchies via Google Fonts API (`Geist`, `Geist Mono`, `DM Sans`, `DM Serif Display`).
-- **Design Systems:** Strict dark/light token integration (`--ink`, `--accent`, `--teal`, `--border`) handling immediate responsive padding systems.
-- **Source Control Management:** Standard Git versioning utilizing declarative imperative commits.
+### Universal HR HUB — HR Document Factory
 
----
+Modular CustomTkinter desktop platform: multi-country JSON profiles, `{{token}}` template engine, vacation calculator addon, Nyomtatás print automation, PDF export via PyInstaller.
 
-## 📦 Highlighted Automation Products Featured Within
+The portfolio includes a browser demo at `#hub-demo` that mirrors the workflow with shared state between addons.
 
-This portfolio serves as a live presentation layer for functional backend engineering utilities built on my local machine:
+### Legacy tools (evolved into HR HUB)
 
-### 1. Word Document Scraper & Automation Utility
+- **HR Contract Document Generator** — Original Hungary-focused tkinter prototype
+- **Print Automation CLI** — Standalone CMD tool, now integrated as the Nyomtatás addon
 
-- **Logic:** Built with Python and `python-docx` to safely mine localized multi-structured files for explicit string constraints.
-- **Packaging:** Compiled into an abstract portable binary executable (`.exe`) via PyInstaller, establishing dependency runtime capabilities on corporate machines without a native Python stack.
-- **Live Component:** Features a dynamic browser-based client emulation demonstrating custom contract token parsing (`{{tokens}}`) updates.
+### Cert projects
 
-### 2. OOP Financial Ledger Engine (The Budget App)
+- **Budget Tracker** — Python OOP ledger with ASCII spend chart
+- **User Configuration Manager** — Dict-based settings CRUD (FreeCodeCamp)
 
-- **Logic:** Robust Object-Oriented transaction broker checking account limits through strict asset mutation validation logic (`check_funds`).
-- **UI Demonstration:** Renders matrix terminal distribution loops visualizing currency percentage usage arrays.
+## Tech stack
 
----
+- HTML5, CSS3 (custom properties, Grid, Flexbox)
+- Vanilla JavaScript (no framework)
+- Google Fonts: Geist, Geist Mono, Instrument Serif / DM Sans, DM Serif Display
