@@ -42,3 +42,5 @@ The portfolio includes a browser demo at `#hub-demo` that mirrors the workflow w
 - HTML5, CSS3 (custom properties, Grid, Flexbox)
 - Vanilla JavaScript (no framework)
 - Google Fonts: Geist, Geist Mono, Instrument Serif / DM Sans, DM Serif Display
+
+- https://roadmap.sh/projects/single-page-cv
