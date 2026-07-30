@@ -489,19 +489,23 @@ a {
 .story-bg {
   position: absolute;
   inset: 0;
+  z-index: 0;
   pointer-events: none;
   background:
-    linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.55) 12%, rgba(255, 255, 255, 0.55) 88%, transparent),
-    radial-gradient(70% 50% at 50% 30%, rgba(29, 78, 216, 0.06), transparent 70%);
+    linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.35) 12%, rgba(255, 255, 255, 0.35) 88%, transparent),
+    radial-gradient(70% 50% at 50% 30%, rgba(29, 78, 216, 0.05), transparent 70%);
 }
 
 .story-rail {
   position: relative;
+  z-index: 1;
   max-width: 40rem;
   margin-inline: auto;
 }
 
 .story-open-wrap {
+  position: relative;
+  z-index: 1;
   max-width: min(52rem, 100% - 2rem);
   margin-inline: auto;
   margin-bottom: 0.5rem;
@@ -521,7 +525,7 @@ a {
 .story-open em {
   font-style: italic;
   font-weight: 500;
-  color: var(--accent);
+  color: #1d4ed8;
 }
 
 .story-beat {
@@ -622,12 +626,18 @@ a {
 .paths-wash {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background:
     radial-gradient(50% 60% at 20% 40%, rgba(15, 118, 110, 0.12), transparent 60%),
     radial-gradient(45% 55% at 80% 30%, rgba(180, 83, 9, 0.1), transparent 55%),
     radial-gradient(40% 50% at 60% 80%, rgba(29, 78, 216, 0.1), transparent 55%),
     linear-gradient(180deg, rgba(246, 245, 242, 0.2), #efece6);
   pointer-events: none;
+}
+
+.paths > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .paths-label {
@@ -645,6 +655,7 @@ a {
   font-weight: 600;
   letter-spacing: -0.03em;
   margin-bottom: 2rem;
+  color: var(--ink);
 }
 
 .page-home .area-gateway {
