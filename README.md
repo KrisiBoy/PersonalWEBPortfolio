@@ -1,46 +1,53 @@
-# Personal Portfolio & Digital Developer CV
+# Personal Experience Hub
 
-A modern personal portfolio and interactive digital CV built with semantic HTML5 and vanilla CSS/JS. Deployed at [krisithecoder.hu](https://krisithecoder.hu).
+Interactive personal brand site for **Illés István Kristóf** — a story-first homepage, with deep-dive area pages and downloadable role-fit CVs. Live at [krisithecoder.hu](https://krisithecoder.hu).
 
-## Site structure
+## Structure
 
 ```
 PersonalWEB/
-├── index.html              Portfolio hub (tools, HR HUB demo, cert playgrounds)
-├── IK_Developer_CV.html    ATS-friendly digital CV
-├── js/hub-demo.js          Universal HR HUB interactive workflow demo
-├── Pictures/               Avatar and hero images
-├── CV/                     Downloadable PDF resume
-└── CNAME                   Custom domain (krisithecoder.hu)
+├── index.html              Story opener (one continuous narrative)
+├── areas/                  Key-area deep dives + CV download
+│   ├── hr-ta.html
+│   ├── delivery.html
+│   ├── build.html          (+ live HR HUB demo)
+│   └── ops.html
+├── cv/                     Standalone role-fit PDFs
+│   └── src/                ATS HTML sources
+├── css/site.css
+├── js/hub-interact.js
+├── js/hub-demo.js
+└── CNAME
 ```
 
-## Live pages
+## Flow
 
-1. **Portfolio (`index.html`)** — Tool showcase with a connected Universal HR HUB demo (vacation calc → contract engine → print queue) plus FreeCodeCamp cert playgrounds.
-2. **Digital CV (`IK_Developer_CV.html`)** — Minimalist resume formatted for ATS and recruiters.
+1. **Home** — scroll the personal journey (not a portfolio of sections).
+2. **Paths** — enter HR / Delivery / Build / Ops for depth.
+3. **Download CV** — separate pre-built PDF from `cv/` (not print-of-site).
 
-## Featured work
+## Local preview
 
-### Universal HR HUB — HR Document Factory
+```bash
+npm run serve
+```
 
-Modular CustomTkinter desktop platform: multi-country JSON profiles, `{{token}}` template engine, vacation calculator addon, Nyomtatás print automation, PDF export via PyInstaller.
+Open http://localhost:5173
 
-The portfolio includes a browser demo at `#hub-demo` that mirrors the workflow with shared state between addons.
+## Regenerate CV PDFs
 
-### Legacy tools (evolved into HR HUB)
+After editing files in `cv/src/`:
 
-- **HR Contract Document Generator** — Original Hungary-focused tkinter prototype
-- **Print Automation CLI** — Standalone CMD tool, now integrated as the Nyomtatás addon
+```bash
+npm install
+npx playwright install chromium
+npm run generate-cvs
+```
 
-### Cert projects
+PDFs are written to `cv/*.pdf` and committed for static hosting.
 
-- **Budget Tracker** — Python OOP ledger with ASCII spend chart
-- **User Configuration Manager** — Dict-based settings CRUD (FreeCodeCamp)
+## Design notes
 
-## Tech stack
-
-- HTML5, CSS3 (custom properties, Grid, Flexbox)
-- Vanilla JavaScript (no framework)
-- Google Fonts: Geist, Geist Mono, Instrument Serif / DM Sans, DM Serif Display
-
-- https://roadmap.sh/projects/single-page-cv
+- One brand shell; four area accents (teal / amber / blue / slate-green).
+- Responsive, modern, intentional motion (`prefers-reduced-motion` respected).
+- CV PDFs stay plain document design — independent of the marketing site.

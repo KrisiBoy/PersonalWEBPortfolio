@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build &amp; Automation — Illés Kristóf</title>
+    <meta
+      name="description"
+      content="Detailed look at Python automation, FastAPI, Universal HR HUB, and systems work — with live demo and CV download."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Geist+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/site.css" />
+  </head>
+  <body data-area="build">
+    <nav class="site-nav" aria-label="Primary">
+      <a class="nav-logo" href="../index.html">Kristóf Illés</a>
+      <a class="nav-cta" href="../cv/Illes_Kristof_Build_CV.pdf" download
+        >Download CV</a
+      >
+    </nav>
+
+    <div class="area-topbar">
+      <a href="../index.html">← Back to story</a>
+      <a
+        class="btn btn-accent"
+        href="../cv/Illes_Kristof_Build_CV.pdf"
+        download="Illes_Kristof_Build_CV.pdf"
+        >Download Build CV</a
+      >
+    </div>
+
+    <header class="area-hero">
+      <div class="container">
+        <p class="eyebrow">Systems</p>
+        <h1>Build &amp; Automation</h1>
+        <p class="lede">
+          Software designed by someone who still runs the process — Python and
+          FastAPI tools for HR workflows, with humans in the loop before
+          anything is exported or printed.
+        </p>
+      </div>
+    </header>
+
+    <main class="section area-body">
+      <div class="container area-narrow">
+        <h2>What this lens is about</h2>
+        <p>
+          I build automation for problems I have felt in production TA and HR
+          ops: duplicated data entry, fragile handoffs, template chaos, and
+          print queues that fail silently. The point is not demos for their own
+          sake — it is reducing admin burden while keeping approval gates where
+          risk lives.
+        </p>
+        <p>
+          I use AI daily to move faster on design, prototyping, and docs. I still
+          own architecture, validation, and release decisions. Pattern:
+          <strong>calculate → review → generate → approve → ship</strong>.
+        </p>
+
+        <h2>Universal HR HUB</h2>
+        <p class="role-meta">
+          Python / FastAPI · SQL · HTML/CSS/JS · Git · enterprise HR context
+        </p>
+        <p>
+          An internal-oriented platform to streamline HR and recruitment
+          administrative load. Modular addons share state: vacation calculation
+          feeds contract tokens; contracts feed a print automation queue
+          (“Nyomtatás”), with human confirmation before documents leave the
+          system.
+        </p>
+        <h3>Architecture &amp; capabilities</h3>
+        <ul>
+          <li>
+            Backend: Python 3.x with FastAPI; Pydantic models; REST-style
+            request/response handling; async patterns where useful
+          </li>
+          <li>Data: SQL (PostgreSQL / MySQL class designs), schema thinking</li>
+          <li>
+            Template engine with <code>{{token}}</code> substitution; empty
+            optional fields pruned from real document output
+          </li>
+          <li>
+            Concepts for candidate profiles, interview score aggregation,
+            evaluation-form standardisation, funnel KPIs (source of hire,
+            conversion, time-to-hire), department reporting
+          </li>
+          <li>
+            ATS-adjacent thinking: SuccessFactors / SmartRecruiters sync
+            patterns via API pull/push to kill duplicate entry
+          </li>
+          <li>
+            Packaging context via PyInstaller for desktop distribution where
+            needed
+          </li>
+          <li>
+            Design target: roughly <strong>30–40% less admin burden</strong> per
+            user through standardisation and fewer re-keys
+          </li>
+        </ul>
+        <p>
+          <a class="btn btn-secondary" href="#hub-live">Try the live browser demo ↓</a>
+        </p>
+
+        <h2>Other builds &amp; systems work</h2>
+        <ul>
+          <li>
+            <strong>Flight Price Tracker</strong> — autonomous Python monitoring,
+            historical trends, alerts, scheduled runs
+            (<a
+              href="https://github.com/KrisiBoy/FlightPriceTracker"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >)
+          </li>
+          <li>
+            <strong>Experience site</strong> — this property: semantic HTML,
+            modern CSS, interactive story + area deep dives
+            (krisithecoder.hu)
+          </li>
+          <li>
+            <strong>Ericsson systems support</strong> — SuccessFactors
+            troubleshooting; escalate to IT partners in India and Sweden; local
+            AI filtering rollout (test, feedback, train)
+          </li>
+          <li>
+            <strong>TheOnlineYou (concept)</strong> — subscription web services
+            for SMEs; product thinking that mixes ops knowledge with delivery
+          </li>
+        </ul>
+
+        <h2>Technical stack</h2>
+        <ul>
+          <li>
+            <strong>Python:</strong> OOP, data structures, exceptions, regex,
+            file/system ops
+          </li>
+          <li>
+            <strong>SQL:</strong> SELECT/JOIN/GROUP BY, writes, schema, indexes
+            awareness
+          </li>
+          <li>
+            <strong>APIs:</strong> REST design, status codes, dependency
+            injection patterns in FastAPI
+          </li>
+          <li>
+            <strong>Web:</strong> HTML5 semantics, CSS Grid/Flex, responsive
+            layout, JavaScript DOM/events (practical)
+          </li>
+          <li>
+            <strong>Tooling:</strong> Git (branch, merge, conflict resolution),
+            GitHub PRs/issues
+          </li>
+          <li>
+            <strong>Earlier ops roots:</strong> PC/VR hardware maintenance,
+            networking basics — comfort with “why is this down?” under pressure
+          </li>
+        </ul>
+
+        <h2>Learning path</h2>
+        <ul>
+          <li>
+            IBM/Coursera: Python for Data Science, AI &amp; Development (2026)
+          </li>
+          <li>IBM/Coursera: Introduction to Software Engineering (2026)</li>
+          <li>Skillsoft: Pythonista · Generative AI fundamentals · ML basics</li>
+          <li>
+            Forage: Datacom software development · BCG Platinion architecture
+          </li>
+          <li>
+            Optical Network Design &amp; Maintenance diploma (Puskás Tivadar,
+            2017–2018)
+          </li>
+        </ul>
+
+        <h2>Skills in practice</h2>
+        <div class="skills-cloud">
+          <span>Python</span>
+          <span>FastAPI</span>
+          <span>Pydantic</span>
+          <span>SQL</span>
+          <span>REST APIs</span>
+          <span>Git / GitHub</span>
+          <span>HTML / CSS / JS</span>
+          <span>Human-in-the-loop</span>
+          <span>Template engines</span>
+          <span>Process automation</span>
+          <span>ATS integration concepts</span>
+          <span>SuccessFactors support</span>
+          <span>AI-assisted build</span>
+        </div>
+
+        <div class="cv-preview">
+          <h3>What’s in the CV download</h3>
+          <ul>
+            <li>Role-fit summary for junior developer / automation</li>
+            <li>Projects with business outcomes (HUB, tracker, site)</li>
+            <li>Technical skills and certifications</li>
+            <li>Enterprise context without drowning ATS parsers</li>
+          </ul>
+          <p style="margin-top: 1rem">
+            <a
+              class="btn btn-accent"
+              href="../cv/Illes_Kristof_Build_CV.pdf"
+              download="Illes_Kristof_Build_CV.pdf"
+              >Download Illes_Kristof_Build_CV.pdf</a
+            >
+          </p>
+        </div>
+
+        <h2 id="hub-live">Live HUB demo</h2>
+        <p>
+          Vacation → contract → print, with shared tokens between addons — a
+          browser sketch of the workflow logic.
+        </p>
+
+        <div id="hub-demo" class="hub-shell" style="margin-top: 1.25rem">
+          <div class="hub-toolbar">
+            <button
+              type="button"
+              class="hub-chip active"
+              id="hub-chip-vacation"
+              onclick="switchHubTab('vacation')"
+            >
+              Vacation
+            </button>
+            <button
+              type="button"
+              class="hub-chip"
+              id="hub-chip-contract"
+              onclick="switchHubTab('contract')"
+            >
+              Contract
+            </button>
+            <button
+              type="button"
+              class="hub-chip"
+              id="hub-chip-print"
+              onclick="switchHubTab('print')"
+            >
+              Print
+            </button>
+          </div>
+          <div class="hub-pipeline">
+            <span class="hub-step" id="hub-step-1">1 · Vacation</span>
+            <span>→</span>
+            <span class="hub-step" id="hub-step-2">2 · Contract</span>
+            <span>→</span>
+            <span class="hub-step" id="hub-step-3">3 · Print</span>
+          </div>
+          <div class="hub-bridge" id="hub-bridge">
+            Shared tokens empty — run Vacation to seed the pipeline.
+          </div>
+
+          <div class="hub-panel active" id="hub-tab-vacation">
+            <span class="hub-addon-badge">Addon · Vacation</span>
+            <div class="demo-grid cols-3">
+              <div class="demo-field">
+                <label for="v-birth">Birth date</label>
+                <input class="demo-input" id="v-birth" type="date" />
+              </div>
+              <div class="demo-field">
+                <label for="v-children">Children</label>
+                <input
+                  class="demo-input"
+                  id="v-children"
+                  type="number"
+                  min="0"
+                  value="0"
+                />
+              </div>
+              <div class="demo-field">
+                <label for="v-start">Employment start</label>
+                <input class="demo-input" id="v-start" type="date" />
+              </div>
+            </div>
+            <div class="demo-actions">
+              <button
+                type="button"
+                class="btn btn-accent"
+                onclick="calculateVacation()"
+              >
+                Calculate
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="applyVacationToContract()"
+              >
+                Apply to contract
+              </button>
+            </div>
+            <div class="demo-msg" id="vacation-msg"></div>
+            <div class="demo-output" id="vacation-output">Awaiting input…</div>
+          </div>
+
+          <div class="hub-panel" id="hub-tab-contract">
+            <span class="hub-addon-badge">Addon · Contract</span>
+            <div class="demo-grid cols-2">
+              <div class="demo-field">
+                <label for="c-name">Employee name</label>
+                <input class="demo-input" id="c-name" type="text" />
+              </div>
+              <div class="demo-field">
+                <label for="c-pos">Position</label>
+                <input class="demo-input" id="c-pos" type="text" />
+              </div>
+              <div class="demo-field">
+                <label for="c-date">Start date</label>
+                <input class="demo-input" id="c-date" type="date" />
+              </div>
+              <div class="demo-field">
+                <label for="c-dept">Department</label>
+                <input class="demo-input" id="c-dept" type="text" />
+              </div>
+              <div class="demo-field">
+                <label for="c-salary">Base salary</label>
+                <input class="demo-input" id="c-salary" type="text" />
+              </div>
+              <div class="demo-field">
+                <label for="c-type">Contract type</label>
+                <input class="demo-input" id="c-type" type="text" />
+              </div>
+            </div>
+            <div class="demo-actions">
+              <button
+                type="button"
+                class="btn btn-accent"
+                onclick="generateContract()"
+              >
+                Generate preview
+              </button>
+            </div>
+            <div class="demo-msg" id="contract-msg"></div>
+            <div class="demo-output" id="contract-output">
+              <div id="contract-preview-area">Awaiting contract data…</div>
+            </div>
+          </div>
+
+          <div class="hub-panel" id="hub-tab-print">
+            <span class="hub-addon-badge">Addon · Nyomtatás</span>
+            <div class="demo-grid cols-2">
+              <div class="demo-field">
+                <label for="p-printer">Printer queue</label>
+                <input
+                  class="demo-input"
+                  id="p-printer"
+                  type="text"
+                  value="PULLPRINT"
+                />
+              </div>
+              <div class="demo-field">
+                <label for="p-duplex">Duplex</label>
+                <select class="demo-input" id="p-duplex">
+                  <option value="none">None</option>
+                  <option value="long">Long edge</option>
+                  <option value="short">Short edge</option>
+                </select>
+              </div>
+            </div>
+            <div class="print-job-list">
+              <label class="print-job-item">
+                <input type="checkbox" id="p-job-contract" checked />
+                Contract pack
+              </label>
+              <label class="print-job-item">
+                <input type="checkbox" id="p-job-medical" />
+                Medical forms
+              </label>
+              <label class="print-job-item">
+                <input type="checkbox" id="p-job-separator" checked />
+                Separator sheet
+              </label>
+            </div>
+            <div class="demo-actions">
+              <button
+                type="button"
+                class="btn btn-accent"
+                onclick="startPrintRun()"
+              >
+                Run print queue
+              </button>
+            </div>
+            <div class="demo-msg" id="print-msg"></div>
+            <div class="demo-output" id="print-output">
+              <div id="print-log">Queue idle.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer container">
+      <a href="../index.html">← Back to story</a>
+      <span>Build lens</span>
+    </footer>
+    <script src="../js/hub-interact.js"></script>
+    <script src="../js/hub-demo.js"></script>
+  </body>
+</html>

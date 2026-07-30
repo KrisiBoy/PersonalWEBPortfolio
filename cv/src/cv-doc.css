@@ -1,0 +1,146 @@
+/* ATS-oriented CV document styles — not the marketing site */
+@page {
+  size: A4;
+  margin: 14mm 14mm;
+}
+
+:root {
+  --ink: #111318;
+  --soft: #5a5f72;
+  --accent: #1a56db;
+  --rule: #d4d8e8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  font-size: 10.5pt;
+  line-height: 1.45;
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 18px 22px;
+  background: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.header h1 {
+  font-size: 22pt;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.role {
+  font-size: 9pt;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.contact {
+  text-align: right;
+  font-size: 9pt;
+  color: var(--soft);
+  line-height: 1.55;
+}
+
+.contact a {
+  color: var(--soft);
+  text-decoration: none;
+}
+
+.summary {
+  margin-bottom: 14px;
+  font-size: 10pt;
+}
+
+.summary strong {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 10pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 3px;
+  margin: 14px 0 8px;
+}
+
+.job {
+  margin-bottom: 10px;
+}
+
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.job-title {
+  font-weight: 700;
+  font-size: 10.5pt;
+}
+
+.job-meta {
+  font-size: 9pt;
+  color: var(--soft);
+}
+
+.job ul {
+  margin: 4px 0 0 16px;
+}
+
+.job li {
+  margin-bottom: 2px;
+}
+
+.skills {
+  columns: 2;
+  column-gap: 24px;
+  font-size: 9.5pt;
+}
+
+.skills p {
+  break-inside: avoid;
+  margin-bottom: 4px;
+}
+
+.edu-row,
+.cert-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 4px;
+  font-size: 9.5pt;
+}
+
+.muted {
+  color: var(--soft);
+}
+
+@media print {
+  body {
+    padding: 0;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
