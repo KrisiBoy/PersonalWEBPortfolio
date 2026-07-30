@@ -20,11 +20,11 @@
 body {
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   color: var(--ink);
-  font-size: 10.5pt;
-  line-height: 1.45;
+  font-size: 9.5pt;
+  line-height: 1.4;
   max-width: 210mm;
   margin: 0 auto;
-  padding: 18px 22px;
+  padding: 14px 18px;
   background: #fff;
 }
 
@@ -65,8 +65,8 @@ body {
 }
 
 .summary {
-  margin-bottom: 14px;
-  font-size: 10pt;
+  margin-bottom: 10px;
+  font-size: 9.5pt;
 }
 
 .summary strong {
@@ -74,16 +74,16 @@ body {
 }
 
 h2 {
-  font-size: 10pt;
+  font-size: 9.5pt;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-bottom: 1px solid var(--rule);
   padding-bottom: 3px;
-  margin: 14px 0 8px;
+  margin: 11px 0 6px;
 }
 
 .job {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .job-head {

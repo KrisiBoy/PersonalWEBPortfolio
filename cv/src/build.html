@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Illés István Kristóf — Build / Automation CV</title>
+    <title>Illés István Kristóf — Tools &amp; Automation CV</title>
     <link rel="stylesheet" href="cv-doc.css" />
   </head>
   <body>
@@ -22,10 +22,14 @@
     </header>
 
     <p class="summary">
-      Emerging Python developer who designs automation from lived HR operations
-      expertise. Builds human-in-the-loop document and workflow tools (FastAPI,
-      SQL, Git) used in enterprise TA contexts — bridging business process and
-      implementation.
+      Emerging Python developer who designs automation from lived HR/TA
+      operations expertise at <strong>Ericsson, Infineon, and Bosch</strong>.
+      Builds human-in-the-loop document and workflow tools (FastAPI, SQL, Git)
+      used in enterprise talent contexts — bridging business process and
+      implementation. Pattern:
+      <strong>calculate → review → generate → approve → ship</strong>. Uses AI
+      daily for speed while owning architecture, validation, and release
+      decisions.
     </p>
 
     <h2>Projects</h2>
@@ -33,19 +37,39 @@
     <div class="job">
       <div class="job-head">
         <div class="job-title">Universal HR HUB — Python / FastAPI</div>
-        <div class="job-meta">Ongoing · Ericsson context</div>
+        <div class="job-meta">Ongoing · Ericsson HR/TA context</div>
       </div>
       <ul>
         <li>
-          Modular HR document factory: vacation calculation, contract template
-          engine (<code>{{tokens}}</code>), print automation addon
+          Modular HR document factory: vacation calculation → contract template
+          engine (<code>{{token}}</code> substitution) → print automation addon
+          (“Nyomtatás”)
         </li>
         <li>
-          Human-in-the-loop gates before export/print; designed to cut admin
-          burden ~30–40% per user via standardization
+          Human-in-the-loop gates before export/print; empty optional fields
+          pruned from real document output
         </li>
         <li>
-          Concepts for KPI dashboards, funnel reporting, ATS-adjacent data sync
+          Backend: Python 3.x, FastAPI, Pydantic models, REST-style APIs; SQL
+          schema thinking (PostgreSQL/MySQL class designs)
+        </li>
+        <li>
+          Concepts for candidate profiles, interview score aggregation,
+          evaluation-form standardisation, funnel KPIs (source of hire,
+          conversion, time-to-hire), department reporting
+        </li>
+        <li>
+          ATS-adjacent sync patterns (SuccessFactors / SmartRecruiters) via API
+          pull/push to reduce duplicate entry
+        </li>
+        <li>
+          Design target: ~<strong>30–40% less admin burden</strong> per user
+          through standardisation; PyInstaller packaging context for desktop
+          distribution
+        </li>
+        <li>
+          Interactive browser demo of the vacation → contract → print pipeline on
+          krisithecoder.hu
         </li>
       </ul>
     </div>
@@ -53,12 +77,16 @@
     <div class="job">
       <div class="job-head">
         <div class="job-title">Flight Price Tracker — Python</div>
-        <div class="job-meta">Public · github.com/KrisiBoy</div>
+        <div class="job-meta">Public · github.com/KrisiBoy/FlightPriceTracker</div>
       </div>
       <ul>
         <li>
-          Autonomous price monitoring, historical trends, notification hooks,
-          scheduled runs
+          Autonomous price monitoring, historical trend tracking, notification
+          hooks, scheduled automation runs
+        </li>
+        <li>
+          FastAPI service context with Capacitor Android / Railway deploy in
+          related work
         </li>
       </ul>
     </div>
@@ -70,12 +98,26 @@
       </div>
       <ul>
         <li>
-          Responsive interactive portfolio with live HR HUB workflow demo
+          Responsive story-first site with interactive path deep-dives and live
+          HUB workflow demo (vanilla JS, modern CSS)
         </li>
       </ul>
     </div>
 
-    <h2>Professional context</h2>
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">TheOnlineYou — agency concept</div>
+        <div class="job-meta">Product / business thinking</div>
+      </div>
+      <ul>
+        <li>
+          Subscription web-services model for SMEs — combining ops knowledge with
+          technical delivery framing
+        </li>
+      </ul>
+    </div>
+
+    <h2>Professional systems context</h2>
     <div class="job">
       <div class="job-head">
         <div class="job-title">Talent Acquisition Operation Partner — Ericsson</div>
@@ -83,12 +125,30 @@
       </div>
       <ul>
         <li>
-          Builds and supports HR automation; troubleshoots HR systems;
-          collaborates with IT partners in India/Sweden
+          Builds/supports HR automation; SuccessFactors troubleshooting;
+          escalates to IT partners in India and Sweden
         </li>
         <li>
-          Informal Scrum Master on internal AI agent student team — delivery exposure
-          alongside engineering mentors
+          Local AI filtering rollout (testing, feedback loops, team training)
+        </li>
+        <li>
+          Informal Scrum Master on student team developing an internal AI agent —
+          delivery exposure with engineering mentors
+        </li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">
+          IT Maintenance &amp; System Administrator — VR Vidámpark
+        </div>
+        <div class="job-meta">Dec 2019 – Aug 2021</div>
+      </div>
+      <ul>
+        <li>
+          High-performance PC/VR hardware maintenance, diagnostics, networking,
+          proactive schedules — uptime under customer pressure
         </li>
       </ul>
     </div>
@@ -96,16 +156,23 @@
     <h2>Technical skills</h2>
     <div class="skills">
       <p>
-        <strong>Languages:</strong> Python (OOP, data structures, file/system),
-        SQL, HTML5, CSS3, JavaScript (basic)
+        <strong>Languages:</strong> Python (OOP, data structures, exceptions,
+        regex, file/system), SQL, HTML5, CSS3, JavaScript (practical)
       </p>
       <p>
         <strong>Frameworks / tools:</strong> FastAPI, Pydantic, REST design, Git
-        / GitHub, PyInstaller (packaging context)
+        / GitHub (branch, merge, PRs), PyInstaller
       </p>
       <p>
         <strong>Practices:</strong> Human-in-the-loop automation, process-first
         architecture, AI-assisted development with owned validation
+      </p>
+      <p>
+        <strong>Enterprise systems:</strong> SuccessFactors, SmartRecruiters, SAP
+        HR (operator + automation context)
+      </p>
+      <p>
+        <strong>Languages (human):</strong> Hungarian C2 · English C1
       </p>
     </div>
 
@@ -115,17 +182,28 @@
       <span class="muted">2020 – 2024</span>
     </div>
     <div class="edu-row">
-      <span>Optical Network Design &amp; Maintenance diploma</span>
+      <span
+        >Technical Diploma — Optical Network Design &amp; Maintenance, Puskás
+        Tivadar</span
+      >
       <span class="muted">2017 – 2018</span>
     </div>
     <div class="cert-row">
       <span
-        >IBM/Coursera: Python for Data Science, AI &amp; Development;
+        >IBM/Coursera: Python for Data Science, AI &amp; Development (2026);
         Introduction to Software Engineering (2026)</span
       >
     </div>
     <div class="cert-row">
-      <span>Skillsoft: Pythonista · Generative AI fundamentals</span>
+      <span
+        >Skillsoft: Pythonista · Generative AI fundamentals · Applying Machine
+        Learning</span
+      >
+    </div>
+    <div class="cert-row">
+      <span
+        >Forage: Datacom Software Development · BCG Platinion Architecture</span
+      >
     </div>
   </body>
 </html>
